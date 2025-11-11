@@ -2,921 +2,1105 @@
   "kylian mbappe": {
     "name": "Kylian Mbappé",
     "team": "PSG",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 91
   },
   "karim benzema": {
     "name": "Karim Benzema",
     "team": "Al-Ittihad",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "kevin de bruyne": {
     "name": "Kevin De Bruyne",
     "team": "Manchester City",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 91
   },
   "lionel messi": {
     "name": "Lionel Messi",
     "team": "Inter Miami",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "robert lewandowski": {
     "name": "Robert Lewandowski",
     "team": "Barcelona",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "thibaut courtois": {
     "name": "Thibaut Courtois",
     "team": "Real Madrid",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "mohamed salah": {
     "name": "Mohamed Salah",
     "team": "Liverpool",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "manuel neuer": {
     "name": "Manuel Neuer",
     "team": "Bayern Munich",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "virgil van dijk": {
     "name": "Virgil van Dijk",
     "team": "Liverpool",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "cristiano ronaldo": {
     "name": "Cristiano Ronaldo",
     "team": "Al-Nassr",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "harry kane": {
     "name": "Harry Kane",
     "team": "Bayern Munich",
-    "base_price": 50000000
+    "base_price": 50000000,
+    "ovr": 90
   },
   "casemiro": {
     "name": "Casemiro",
     "team": "Manchester United",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "alisson": {
     "name": "Alisson",
     "team": "Liverpool",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "joshua kimmich": {
     "name": "Joshua Kimmich",
     "team": "Bayern Munich",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "n'golo kante": {
     "name": "N'Golo Kanté",
     "team": "Al-Ittihad",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "jan oblak": {
     "name": "Jan Oblak",
     "team": "Atlético Madrid",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "erling haaland": {
     "name": "Erling Haaland",
     "team": "Manchester City",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 91
   },
   "ederson": {
     "name": "Ederson",
     "team": "Manchester City",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "heung min son": {
     "name": "Heung Min Son",
     "team": "Tottenham",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "neymar jr": {
     "name": "Neymar Jr",
     "team": "Al Hilal",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "rodri": {
     "name": "Rodri",
     "team": "Manchester City",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 89
   },
   "toni kroos": {
     "name": "Toni Kroos",
     "team": "Real Madrid",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "bernardo silva": {
     "name": "Bernardo Silva",
     "team": "Manchester City",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "marquinhos": {
     "name": "Marquinhos",
     "team": "PSG",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "ruben dias": {
     "name": "Rúben Dias",
     "team": "Manchester City",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "luka modric": {
     "name": "Luka Modrić",
     "team": "Real Madrid",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "marc-andre ter stegen": {
     "name": "Marc-André ter Stegen",
     "team": "Barcelona",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "joao cancelo": {
     "name": "João Cancelo",
     "team": "Barcelona",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 88
   },
   "frenkie de jong": {
     "name": "Frenkie de Jong",
     "team": "Barcelona",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 87
   },
   "antonio rudiger": {
     "name": "Antonio Rüdiger",
     "team": "Real Madrid",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 87
   },
   "kalidou koulibaly": {
     "name": "Kalidou Koulibaly",
     "team": "Al Hilal",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 87
   },
   "trent alexander-arnold": {
     "name": "Trent Alexander-Arnold",
     "team": "Liverpool",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 87
   },
   "bruno fernandes": {
     "name": "Bruno Fernandes",
     "team": "Manchester United",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 87
   },
   "gianluigi donnarumma": {
     "name": "Gianluigi Donnarumma",
     "team": "PSG",
-    "base_price": 40000000
+    "base_price": 40000000,
+    "ovr": 87
   },
   "federico valverde": {
     "name": "Federico Valverde",
     "team": "Real Madrid",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "david alaba": {
     "name": "David Alaba",
     "team": "Real Madrid",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "eder militao": {
     "name": "Éder Militão",
     "team": "Real Madrid",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "andrew robertson": {
     "name": "Andrew Robertson",
     "team": "Liverpool",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "aymeric laporte": {
     "name": "Aymeric Laporte",
     "team": "Al-Nassr",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "milan skriniar": {
     "name": "Milan Škriniar",
     "team": "PSG",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "kingsley coman": {
     "name": "Kingsley Coman",
     "team": "Bayern Munich",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "vinicius jr.": {
     "name": "Vinícius Jr.",
     "team": "Real Madrid",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "rafael leao": {
     "name": "Rafael Leão",
     "team": "AC Milan",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 86
   },
   "theo hernandez": {
     "name": "Theo Hernández",
     "team": "AC Milan",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "sadio mane": {
     "name": "Sadio Mané",
     "team": "Al-Nassr",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "paul pogba": {
     "name": "Paul Pogba",
     "team": "Juventus",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "leon goretzka": {
     "name": "Leon Goretzka",
     "team": "Bayern Munich",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "marco verratti": {
     "name": "Marco Verratti",
     "team": "Al-Arabi",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "niklas sule": {
     "name": "Niklas Süle",
     "team": "Borussia Dortmund",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "ciro immobile": {
     "name": "Ciro Immobile",
     "team": "Lazio",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "jude bellingham": {
     "name": "Jude Bellingham",
     "team": "Real Madrid",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "jamal musiala": {
     "name": "Jamal Musiala",
     "team": "Bayern Munich",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "christopher nkunku": {
     "name": "Christopher Nkunku",
     "team": "Chelsea",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "matthijs de ligt": {
     "name": "Matthijs de Ligt",
     "team": "Bayern Munich",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "pedri": {
     "name": "Pedri",
     "team": "Barcelona",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "nicolo barella": {
     "name": "Nicolò Barella",
     "team": "Inter Milan",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "lautaro martinez": {
     "name": "Lautaro Martínez",
     "team": "Inter Milan",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 87
   },
   "kyle walker": {
     "name": "Kyle Walker",
     "team": "Manchester City",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "riyad mahrez": {
     "name": "Riyad Mahrez",
     "team": "Al-Ahli",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "marcos acuna": {
     "name": "Marcos Acuña",
     "team": "Sevilla",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "diogo jota": {
     "name": "Diogo Jota",
     "team": "Liverpool",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "phil foden": {
     "name": "Phil Foden",
     "team": "Manchester City",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "marcus rashford": {
     "name": "Marcus Rashford",
     "team": "Manchester United",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "bukayo saka": {
     "name": "Bukayo Saka",
     "team": "Arsenal",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "dominik szoboszlai": {
     "name": "Dominik Szoboszlai",
     "team": "Liverpool",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "declan rice": {
     "name": "Declan Rice",
     "team": "Arsenal",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "sandro tonali": {
     "name": "Sandro Tonali",
     "team": "Newcastle Utd",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "josko gvardiol": {
     "name": "Joško Gvardiol",
     "team": "Manchester City",
-    "base_price": 30000000
+    "base_price": 30000000,
+    "ovr": 85
   },
   "stefan de vrij": {
     "name": "Stefan de Vrij",
     "team": "Inter",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "koke": {
     "name": "Koke",
     "team": "Atlético Madrid",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "yann sommer": {
     "name": "Yann Sommer",
     "team": "Inter",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "dusan tadic": {
     "name": "Dušan Tadić",
     "team": "Fenerbahçe",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "marcos llorente": {
     "name": "Marcos Llorente",
     "team": "Atlético Madrid",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "raheem sterling": {
     "name": "Raheem Sterling",
     "team": "Chelsea",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "paulo dybala": {
     "name": "Paulo Dybala",
     "team": "Roma",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "thomas muller": {
     "name": "Thomas Müller",
     "team": "Bayern Munich",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "raphael varane": {
     "name": "Raphaël Varane",
     "team": "Manchester United",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "jules kounde": {
     "name": "Jules Koundé",
     "team": "Barcelona",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "achraf hakimi": {
     "name": "Achraf Hakimi",
     "team": "PSG",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "gavi": {
     "name": "Gavi",
     "team": "Barcelona",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "dayot upamecano": {
     "name": "Dayot Upamecano",
     "team": "Bayern Munich",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "reece james": {
     "name": "Reece James",
     "team": "Chelsea",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "dusan vlahovic": {
     "name": "Dušan Vlahović",
     "team": "Juventus",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "fikayo tomori": {
     "name": "Fikayo Tomori",
     "team": "AC Milan",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "alphonso davies": {
     "name": "Alphonso Davies",
     "team": "Bayern Munich",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "rodrygo": {
     "name": "Rodrygo",
     "team": "Real Madrid",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "florian wirtz": {
     "name": "Florian Wirtz",
     "team": "Bayer Leverkusen",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "dani carvajal": {
     "name": "Dani Carvajal",
     "team": "Real Madrid",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "kieran trippier": {
     "name": "Kieran Trippier",
     "team": "Newcastle Utd",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "leroy sane": {
     "name": "Leroy Sané",
     "team": "Bayern Munich",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "ronald araujo": {
     "name": "Ronald Araújo",
     "team": "Barcelona",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "lisandro martinez": {
     "name": "Lisandro Martínez",
     "team": "Manchester United",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "thiago silva": {
     "name": "Thiago Silva",
     "team": "Chelsea",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "antoine griezmann": {
     "name": "Antoine Griezmann",
     "team": "Atlético Madrid",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 88
   },
   "luis diaz": {
     "name": "Luis Díaz",
     "team": "Liverpool",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "william saliba": {
     "name": "William Saliba",
     "team": "Arsenal",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "cristian romero": {
     "name": "Cristian Romero",
     "team": "Tottenham",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "bremer": {
     "name": "Bremer",
     "team": "Juventus",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "pau torres": {
     "name": "Pau Torres",
     "team": "Aston Villa",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "presnel kimpembe": {
     "name": "Presnel Kimpembe",
     "team": "PSG",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "ibrahima konate": {
     "name": "Ibrahima Konaté",
     "team": "Liverpool",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "john stones": {
     "name": "John Stones",
     "team": "Manchester City",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "christian eriksen": {
     "name": "Christian Eriksen",
     "team": "Manchester United",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "piotr zielinski": {
     "name": "Piotr Zieliński",
     "team": "Napoli",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "raphinha": {
     "name": "Raphinha",
     "team": "Barcelona",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "federico chiesa": {
     "name": "Federico Chiesa",
     "team": "Juventus",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "moussa diaby": {
     "name": "Moussa Diaby",
     "team": "Aston Villa",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "ousmane dembele": {
     "name": "Ousmane Dembélé",
     "team": "PSG",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "domenico berardi": {
     "name": "Domenico Berardi",
     "team": "Sassuolo",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "diego carlos": {
     "name": "Diego Carlos",
     "team": "Aston Villa",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "gerard moreno": {
     "name": "Gerard Moreno",
     "team": "Villarreal",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "jorginho": {
     "name": "Jorginho",
     "team": "Arsenal",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "mikel oyarzabal": {
     "name": "Mikel Oyarzabal",
     "team": "Real Sociedad",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "lorenzo pellegrini": {
     "name": "Lorenzo Pellegrini",
     "team": "Roma",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 83
   },
   "gregor kobel": {
     "name": "Gregor Kobel",
     "team": "Borussia Dortmund",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 87
   },
   "jordan pickford": {
     "name": "Jordan Pickford",
     "team": "Everton",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "idrissa gueye": {
     "name": "Idrissa Gueye",
     "team": "Everton",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "lucas moura": {
     "name": "Lucas Moura",
     "team": "Tottenham",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "anthony martial": {
     "name": "Anthony Martial",
     "team": "Manchester United",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "william carvalho": {
     "name": "William Carvalho",
     "team": "Real Betis",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "dominik livakovic": {
     "name": "Dominik Livaković",
     "team": "Fenerbahçe",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "richarlison": {
     "name": "Richarlison",
     "team": "Tottenham",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "gabriel martinelli": {
     "name": "Gabriel Martinelli",
     "team": "Arsenal",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "luis muriel": {
     "name": "Luis Muriel",
     "team": "Atalanta",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "juan cuadrado": {
     "name": "Juan Cuadrado",
     "team": "Inter",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "jesus navas": {
     "name": "Jesús Navas",
     "team": "Sevilla",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "ivan rakitic": {
     "name": "Ivan Rakitić",
     "team": "Sevilla",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "ante rebic": {
     "name": "Ante Rebić",
     "team": "Beşiktaş",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "jose sa": {
     "name": "José Sá",
     "team": "Wolves",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "conor coady": {
     "name": "Conor Coady",
     "team": "Leicester City",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "emre can": {
     "name": "Emre Can",
     "team": "Borussia Dortmund",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "aaron wan-bissaka": {
     "name": "Aaron Wan-Bissaka",
     "team": "Manchester United",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "wout weghorst": {
     "name": "Wout Weghorst",
     "team": "Hoffenheim",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "leandro trossard": {
     "name": "Leandro Trossard",
     "team": "Arsenal",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "kaoru mitoma": {
     "name": "Kaoru Mitoma",
     "team": "Brighton",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "wilfred ndidi": {
     "name": "Wilfred Ndidi",
     "team": "Leicester City",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "aurelien tchouameni": {
     "name": "Aurélien Tchouaméni",
     "team": "Real Madrid",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "dani olmo": {
     "name": "Dani Olmo",
     "team": "RB Leipzig",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "unai simon": {
     "name": "Unai Simón",
     "team": "Athletic Bilbao",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "inaki williams": {
     "name": "Iñaki Williams",
     "team": "Athletic Bilbao",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "jeremie frimpong": {
     "name": "Jeremie Frimpong",
     "team": "Bayer Leverkusen",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "nuno mendes": {
     "name": "Nuno Mendes",
     "team": "PSG",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "noussair mazraoui": {
     "name": "Noussair Mazraoui",
     "team": "Bayern Munich",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "denzel dumfries": {
     "name": "Denzel Dumfries",
     "team": "Inter Milan",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "steven berghuis": {
     "name": "Steven Berghuis",
     "team": "Ajax",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "joao felix": {
     "name": "João Félix",
     "team": "Barcelona",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "cody gakpo": {
     "name": "Cody Gakpo",
     "team": "Liverpool",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 83
   },
   "samir handanovic": {
     "name": "Samir Handanović",
     "team": "Inter Milan",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "lucas hernandez": {
     "name": "Lucas Hernández",
     "team": "PSG",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 84
   },
   "zambo anguissa": {
-    "name":An"Zambo Anguissa",
+    "name": "Zambo Anguissa",
     "team": "Napoli",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "memphis depay": {
     "name": "Memphis Depay",
     "team": "Atlético Madrid",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "tammy abraham": {
     "name": "Tammy Abraham",
     "team": "Roma",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "timo werner": {
     "name": "Timo Werner",
     "team": "RB Leipzig",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "pedro porro": {
     "name": "Pedro Porro",
     "team": "Tottenham",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "rafa": {
     "name": "Rafa",
     "team": "Benfica",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "antony": {
     "name": "Antony",
     "team": "Manchester United",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "ferran torres": {
     "name": "Ferran Torres",
     "team": "Barcelona",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "ferland mendy": {
     "name": "Ferland Mendy",
     "team": "Real Madrid",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "carlos soler": {
     "name": "Carlos Soler",
     "team": "PSG",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "thomas lemar": {
     "name": "Thomas Lemar",
     "team": "Atlético Madrid",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "hakim ziyech": {
     "name": "Hakim Ziyech",
     "team": "Galatasaray",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "hirving lozano": {
     "name": "Hirving Lozano",
     "team": "PSV Eindhoven",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "nick pope": {
     "name": "Nick Pope",
     "team": "Newcastle Utd",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "lucas paqueta": {
     "name": "Lucas Paquetá",
     "team": "West Ham",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 82
   },
   "leonardo spinazzola": {
     "name": "Leonardo Spinazzola",
     "team": "Roma",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "konrad laimer": {
     "name": "Konrad Laimer",
     "team": "Bayern Munich",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "marco reus": {
     "name": "Marco Reus",
     "team": "Borussia Dortmund",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "chris smalling": {
     "name": "Chris Smalling",
     "team": "Roma",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "matthias ginter": {
     "name": "Matthias Ginter",
     "team": "SC Freiburg",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "ricardo pereira": {
     "name": "Ricardo Pereira",
     "team": "Leicester City",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "leon bailey": {
     "name": "Leon Bailey",
     "team": "Aston Villa",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "alex grimaldo": {
     "name": "Álex Grimaldo",
     "team": "Bayer Leverkusen",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "jose gaya": {
     "name": "José Gayà",
     "team": "Valencia",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 80
   },
   "fernando": {
     "name": "Fernando",
     "team": "Sevilla",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 81
   },
   "roger ibanez": {
     "name": "Roger Ibañez",
     "team": "Al-Ahli",
-    "base_price": 10000000
+    "base_price": 10000000,
+    "ovr": 79
   },
   "mason mount": {
     "name": "Mason Mount",
     "team": "Manchester United",
-    "base_price": 20000000
+    "base_price": 20000000,
+    "ovr": 84
   },
   "darwin nunez": {
     "name": "Darwin Núñez",
     "team": "Liverpool",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 82
   },
   "mykhailo mudryk": {
     "name": "Mykhailo Mudryk",
     "team": "Chelsea",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 75
   },
   "ollie watkins": {
     "name": "Ollie Watkins",
     "team": "Aston Villa",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 80
   },
   "alexander isak": {
     "name": "Alexander Isak",
     "team": "Newcastle Utd",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 81
   },
   "taiwo awoniyi": {
     "name": "Taiwo Awoniyi",
     "team": "Nottm Forest",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 79
   },
   "nicolas tagliafico": {
     "name": "Nicolás Tagliafico",
     "team": "Lyon",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 81
   },
   "ben white": {
     "name": "Ben White",
     "team": "Arsenal",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 80
   },
   "manuel ugarte": {
     "name": "Manuel Ugarte",
     "team": "PSG",
-    "base_price": 5000000
+    "base_price": 5000000,
+    "ovr": 79
   }
 }
