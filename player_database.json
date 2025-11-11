@@ -339,6 +339,26 @@
     "team": "Manchester City",
     "base_price": 30000000
   },
+  "stefan de vrij": {
+    "name": "Stefan de Vrij",
+    "team": "Inter",
+    "base_price": 20000000
+  },
+  "koke": {
+    "name": "Koke",
+    "team": "Atlético Madrid",
+    "base_price": 20000000
+  },
+  "yann sommer": {
+    "name": "Yann Sommer",
+    "team": "Inter",
+    "base_price": 20000000
+  },
+  "dusan tadic": {
+    "name": "Dušan Tadić",
+    "team": "Fenerbahçe",
+    "base_price": 20000000
+  },
   "marcos llorente": {
     "name": "Marcos Llorente",
     "team": "Atlético Madrid",
@@ -529,6 +549,131 @@
     "team": "Aston Villa",
     "base_price": 20000000
   },
+  "gerard moreno": {
+    "name": "Gerard Moreno",
+    "team": "Villarreal",
+    "base_price": 20000000
+  },
+  "jorginho": {
+    "name": "Jorginho",
+    "team": "Arsenal",
+    "base_price": 20000000
+  },
+  "mikel oyarzabal": {
+    "name": "Mikel Oyarzabal",
+    "team": "Real Sociedad",
+    "base_price": 20000000
+  },
+  "lorenzo pellegrini": {
+    "name": "Lorenzo Pellegrini",
+    "team": "Roma",
+    "base_price": 20000000
+  },
+  "gregor kobel": {
+    "name": "Gregor Kobel",
+    "team": "Borussia Dortmund",
+    "base_price": 20000000
+  },
+  "jordan pickford": {
+    "name": "Jordan Pickford",
+    "team": "Everton",
+    "base_price": 10000000
+  },
+  "idrissa gueye": {
+    "name": "Idrissa Gueye",
+    "team": "Everton",
+    "base_price": 10000000
+  },
+  "lucas moura": {
+    "name": "Lucas Moura",
+    "team": "Tottenham",
+    "base_price": 10000000
+  },
+  "anthony martial": {
+    "name": "Anthony Martial",
+    "team": "Manchester United",
+    "base_price": 10000000
+  },
+  "william carvalho": {
+    "name": "William Carvalho",
+    "team": "Real Betis",
+    "base_price": 10000000
+  },
+  "dominik livakovic": {
+    "name": "Dominik Livaković",
+    "team": "Fenerbahçe",
+    "base_price": 10000000
+  },
+  "richarlison": {
+    "name": "Richarlison",
+    "team": "Tottenham",
+    "base_price": 10000000
+  },
+  "gabriel martinelli": {
+    "name": "Gabriel Martinelli",
+    "team": "Arsenal",
+    "base_price": 10000000
+  },
+  "luis muriel": {
+    "name": "Luis Muriel",
+    "team": "Atalanta",
+    "base_price": 10000000
+  },
+  "juan cuadrado": {
+    "name": "Juan Cuadrado",
+    "team": "Inter",
+    "base_price": 10000000
+  },
+  "jesus navas": {
+    "name": "Jesús Navas",
+    "team": "Sevilla",
+    "base_price": 10000000
+  },
+  "ivan rakitic": {
+    "name": "Ivan Rakitić",
+    "team": "Sevilla",
+    "base_price": 10000000
+  },
+  "ante rebic": {
+    "name": "Ante Rebić",
+    "team": "Beşiktaş",
+    "base_price": 10000000
+  },
+  "jose sa": {
+    "name": "José Sá",
+    "team": "Wolves",
+    "base_price": 10000000
+  },
+  "conor coady": {
+    "name": "Conor Coady",
+    "team": "Leicester City",
+    "base_price": 10000000
+  },
+  "emre can": {
+    "name": "Emre Can",
+    "team": "Borussia Dortmund",
+    "base_price": 10000000
+  },
+  "aaron wan-bissaka": {
+    "name": "Aaron Wan-Bissaka",
+    "team": "Manchester United",
+    "base_price": 10000000
+  },
+  "wout weghorst": {
+    "name": "Wout Weghorst",
+    "team": "Hoffenheim",
+    "base_price": 10000000
+  },
+  "leandro trossard": {
+    "name": "Leandro Trossard",
+    "team": "Arsenal",
+    "base_price": 10000000
+  },
+  "kaoru mitoma": {
+    "name": "Kaoru Mitoma",
+    "team": "Brighton",
+    "base_price": 10000000
+  },
   "wilfred ndidi": {
     "name": "Wilfred Ndidi",
     "team": "Leicester City",
@@ -600,7 +745,7 @@
     "base_price": 10000000
   },
   "zambo anguissa": {
-    "name": "Zambo Anguissa",
+    "name":An"Zambo Anguissa",
     "team": "Napoli",
     "base_price": 10000000
   },
@@ -733,5 +878,45 @@
     "name": "Mason Mount",
     "team": "Manchester United",
     "base_price": 20000000
+  },
+  "darwin nunez": {
+    "name": "Darwin Núñez",
+    "team": "Liverpool",
+    "base_price": 5000000
+  },
+  "mykhailo mudryk": {
+    "name": "Mykhailo Mudryk",
+    "team": "Chelsea",
+    "base_price": 5000000
+  },
+  "ollie watkins": {
+    "name": "Ollie Watkins",
+    "team": "Aston Villa",
+    "base_price": 5000000
+  },
+  "alexander isak": {
+    "name": "Alexander Isak",
+    "team": "Newcastle Utd",
+    "base_price": 5000000
+  },
+  "taiwo awoniyi": {
+    "name": "Taiwo Awoniyi",
+    "team": "Nottm Forest",
+    "base_price": 5000000
+  },
+  "nicolas tagliafico": {
+    "name": "Nicolás Tagliafico",
+    "team": "Lyon",
+    "base_price": 5000000
+  },
+  "ben white": {
+    "name": "Ben White",
+    "team": "Arsenal",
+    "base_price": 5000000
+  },
+  "manuel ugarte": {
+    "name": "Manuel Ugarte",
+    "team": "PSG",
+    "base_price": 5000000
   }
 }
