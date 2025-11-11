@@ -30,6 +30,7 @@ STEAL_COUNTDOWN_SECONDS = 15 # Time to decide to steal
 # --- Global State Variables ---
 bot.current_auction_task = None
 bot.current_steal_task = None
+bot.current_initial_bid_task = None # Tracks the *initial* 5s countdown
 
 # --- Data Management Functions ---
 
@@ -39,8 +40,8 @@ def get_default_data():
         "managers": {},
         "player_cap": DEFAULT_PLAYER_CAP,
         "auction_state": "idle", # idle, bidding, drafting, paused
-        "auction_queue": [],     # NEW: List of player keys to auction
-        "auction_queue_index": 0,# NEW: Current position in the queue
+        "auction_queue": [],     # List of player keys to auction
+        "auction_queue_index": 0,# Current position in the queue
         "on_the_block": None,    # { "name": "Player", "base_price": 10, "ovr": 88 }
         "current_bid": 0,
         "current_bidder": None,  # Manager key
@@ -169,9 +170,49 @@ async def call_next_player(channel: discord.TextChannel):
         color=discord.Color.blue()
     )
     await channel.send(embed=embed)
+    
+    # NEW: Start the initial 5-second countdown for the first bid
+    bot.current_initial_bid_task = bot.loop.create_task(
+        initial_bid_countdown(channel, player["name"])
+    )
 
 # --- Auction Countdown Logic ---
+async def initial_bid_countdown(channel: discord.TextChannel, player_name: str):
+    """The task that runs the *initial* 5s countdown when a player is nominated."""
+    try:
+        await asyncio.sleep(BID_COUNTDOWN_SECONDS)
+        
+        # --- NO BIDS! ---
+        # If we got here without being cancelled, no one bid.
+        data = load_data(DATA_FILE)
+        
+        # Check if the auction is still active for this player and no bids came in
+        if (data["auction_state"] == "bidding" and 
+            data["on_the_block"] and 
+            data["on_the_block"]["name"] == player_name and 
+            data["current_bidder"] is None):
+            
+            await channel.send(f"⏰ **Time's up!** No bids for **{player_name}**.\n"
+                               f"Marked as **UNSOLD**.")
+            
+            # Reset auction state
+            data["auction_state"] = "idle"
+            data["on_the_block"] = None
+            data["current_bid"] = 0
+            data["current_bidder"] = None
+            save_data(data, DATA_FILE)
+            
+            bot.current_initial_bid_task = None
+            
+            # Automatically call the next player
+            await channel.send("Getting the next player...")
+            await asyncio.sleep(2) # Brief pause
+            await call_next_player(channel)
 
+    except asyncio.CancelledError:
+        # This is expected! It means a bid came in.
+        # The `on_message` function will handle the next step.
+        return
 async def auction_countdown(channel: discord.TextChannel, player_name: str, final_bid: int, bidder_key: str):
     """The task that runs the live auction countdown."""
     data = load_data(DATA_FILE)
@@ -267,7 +308,8 @@ async def steal_countdown(channel: discord.TextChannel, player_name: str, base_p
         manager["players"].append(f"{player['name']} ({player['ovr']} OVR) - Draft")
         
         player_db = load_data(PLAYER_DB_FILE)
-        if player_name.lower() in player_db:
+        player_key = player_name.lower()
+        if player_key in player_db:
             player_db.pop(player_key)
             save_data(player_db, PLAYER_DB_FILE)
 
@@ -353,7 +395,12 @@ async def on_message(message: discord.Message):
         return
         
     # --- BID ACCEPTED ---
-    
+
+    # NEW: Cancel the *initial* bid timer if it's running
+    if bot.current_initial_bid_task:
+        bot.current_initial_bid_task.cancel()
+        bot.current_initial_bid_task = None
+
     # Cancel the previous countdown
     if bot.current_auction_task:
         bot.current_auction_task.cancel()
@@ -370,18 +417,33 @@ async def on_message(message: discord.Message):
 
 # --- Admin Slash Commands ---
 
-@tree.command(name="reset", description="Resets the entire auction. (Admin Only)")
+@tree.command(name="reset", description="Resets the auction, clearing all managers and rosters. (Admin Only)")
 @commands.has_permissions(administrator=True)
 async def reset_command(interaction: discord.Interaction):
-    data = get_default_data()
-    save_data(data, DATA_FILE)
+    # 1. Load data to check state
+    data = load_data(DATA_FILE)
+
+    # 2. Cancel any running tasks
+    if data["auction_state"] == "bidding":
+        if bot.current_auction_task:
+            bot.current_auction_task.cancel()
+            bot.current_auction_task = None
+        if bot.current_initial_bid_task:
+            bot.current_initial_bid_task.cancel()
+            bot.current_initial_bid_task = None
+    elif data["auction_state"] == "drafting":
+        if bot.current_steal_task:
+            bot.current_steal_task.cancel()
+            bot.current_steal_task = None
+
+    # 3. Get default auction data (this clears managers, state, queue, etc.)
+    new_data = get_default_data()
+    save_data(new_data, DATA_FILE)
     
-    if os.path.exists(PLAYER_DB_FILE + ".bak"):
-        shutil.copy(PLAYER_DB_FILE + ".bak", PLAYER_DB_FILE)
-        await interaction.response.send_message("🚨 **AUCTION RESET!** 🚨\nAll managers, players, and budgets cleared. Player database reset from backup.")
-    else:
-        save_data({}, PLAYER_DB_FILE)
-        await interaction.response.send_message("🚨 **AUCTION RESET!** 🚨\nAll managers, players, and budgets cleared. Player database is now empty.")
+    # 4. Inform the admin.
+    await interaction.response.send_message("🚨 **AUCTION RESET!** 🚨\nAll managers, player rosters, and budgets have been cleared.\n"
+                                             "The **Player Database** has **NOT** been touched.\n"
+                                             "Ready to start a new season. Use `/addmanager` to begin.")
 
 @tree.command(name="undo", description="Undoes the last transaction. (Admin Only)")
 @commands.has_permissions(administrator=True)
@@ -452,10 +514,14 @@ async def pause_command(interaction: discord.Interaction):
         await interaction.response.send_message("❌ No auction or draft is currently active.", ephemeral=True)
         return
 
-    # Cancel the running task
-    if data["auction_state"] == "bidding" and bot.current_auction_task:
-        bot.current_auction_task.cancel()
-        bot.current_auction_task = None
+    # Cancel the running task(s)
+    if data["auction_state"] == "bidding":
+        if bot.current_auction_task:
+            bot.current_auction_task.cancel()
+            bot.current_auction_task = None
+        if bot.current_initial_bid_task:
+            bot.current_initial_bid_task.cancel()
+            bot.current_initial_bid_task = None
     elif data["auction_state"] == "drafting" and bot.current_steal_task:
         bot.current_steal_task.cancel()
         bot.current_steal_task = None
@@ -476,11 +542,18 @@ async def resume_command(interaction: discord.Interaction):
     
     # Check if we are resuming a bid or a steal
     if data["on_the_block"] and data["current_bidder"]:
-        # Resuming a bid
+        # Resuming a "Going once..." bid
         data["auction_state"] = "bidding"
         save_data(data, DATA_FILE)
         bot.current_auction_task = bot.loop.create_task(
             auction_countdown(interaction.channel, data["on_the_block"]["name"], data["current_bid"], data["current_bidder"])
+        )
+    elif data["on_the_block"] and not data["current_bidder"]:
+        # Resuming an *initial* 5s bid
+        data["auction_state"] = "bidding"
+        save_data(data, DATA_FILE)
+        bot.current_initial_bid_task = bot.loop.create_task(
+            initial_bid_countdown(interaction.channel, data["on_the_block"]["name"])
         )
     elif data["on_the_block"] and data["draft_order"]: 
          # Resuming a draft steal
@@ -490,7 +563,7 @@ async def resume_command(interaction: discord.Interaction):
         if drafter_key_index == 0:
              drafter_key = data["draft_order"][0]
         else:
-             drafter_key = data["draft_order"][drafter_key_index - 1] 
+             drafter_key = data["draft_order"][data["draft_pick_index"] - 1] 
              
         bot.current_steal_task = bot.loop.create_task(
             steal_countdown(interaction.channel, data["on_the_block"]["name"], data["on_the_block"]["base_price"], drafter_key)
@@ -512,6 +585,10 @@ async def unsold_command(interaction: discord.Interaction):
     if bot.current_auction_task:
         bot.current_auction_task.cancel()
         bot.current_auction_task = None
+    
+    if bot.current_initial_bid_task: # Corrected
+        bot.current_initial_bid_task.cancel()
+        bot.current_initial_bid_task = None
 
     player_name = data["on_the_block"]["name"]
     data["auction_state"] = "idle" # Set to idle temporarily
@@ -610,7 +687,12 @@ async def start_command(interaction: discord.Interaction):
     await interaction.response.send_message("🚀 **Auction Starting!**\nBuilding player queue...")
 
     # --- Build the Queue ---
-    retained_players = {m['retained_player'].lower() for m in data["managers"].values() if m['retained_player']}
+    retained_players = set()
+    for m in data["managers"].values():
+        if m.get("retained_player"):
+            # Retained player is stored as "Name (OVR)"
+            retained_name = m["retained_player"].split(" (")[0].lower()
+            retained_players.add(retained_name)
     
     tier1 = [] # 86+
     tier2 = [] # 83-85
@@ -670,6 +752,9 @@ async def check_and_start_draft(channel: discord.TextChannel):
         if bot.current_auction_task: # Cancel any pending sale
             bot.current_auction_task.cancel()
             bot.current_auction_task = None
+        if bot.current_initial_bid_task: # Also cancel initial task
+            bot.current_initial_bid_task.cancel()
+            bot.current_initial_bid_task = None
             
         await channel.send(f"🚨 **{managers_at_zero} MANAGERS** have no money! **DRAFT MODE INITIATED!** 🚨")
         
