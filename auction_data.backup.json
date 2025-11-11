@@ -1,0 +1,10 @@
+{
+    "managers": {},
+    "player_cap": 18,
+    "auction_state": "idle",
+    "on_the_block": null,
+    "current_bid": 0,
+    "current_bidder": null,
+    "draft_order": [],
+    "draft_pick_index": 0
+}
