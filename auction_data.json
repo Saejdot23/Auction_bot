@@ -1,15 +1,9 @@
 {
-    "managers": {
-        "sahej": {
-            "name": "sahej",
-            "budget": 750000000,
-            "spent": 0,
-            "players": [],
-            "retained_player": null
-        }
-    },
+    "managers": {},
     "player_cap": 18,
     "auction_state": "idle",
+    "auction_queue": [],
+    "auction_queue_index": 0,
     "on_the_block": null,
     "current_bid": 0,
     "current_bidder": null,
