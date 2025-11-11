@@ -5,6 +5,7 @@ import os
 import shutil
 from dotenv import load_dotenv
 import asyncio
+import random
 
 # --- Bot Setup ---
 load_dotenv()
@@ -27,9 +28,8 @@ BID_COUNTDOWN_SECONDS = 5  # Time for final countdown
 STEAL_COUNTDOWN_SECONDS = 15 # Time to decide to steal
 
 # --- Global State Variables ---
-# These are managed by the bot's functions, not edited directly
-bot.current_auction_task = None  # Holds the asyncio.Task for the live bid countdown
-bot.current_steal_task = None    # Holds the asyncio.Task for the draft steal countdown
+bot.current_auction_task = None
+bot.current_steal_task = None
 
 # --- Data Management Functions ---
 
@@ -39,7 +39,9 @@ def get_default_data():
         "managers": {},
         "player_cap": DEFAULT_PLAYER_CAP,
         "auction_state": "idle", # idle, bidding, drafting, paused
-        "on_the_block": None,    # { "name": "Player", "base_price": 10 }
+        "auction_queue": [],     # NEW: List of player keys to auction
+        "auction_queue_index": 0,# NEW: Current position in the queue
+        "on_the_block": None,    # { "name": "Player", "base_price": 10, "ovr": 88 }
         "current_bid": 0,
         "current_bidder": None,  # Manager key
         "draft_order": [],
@@ -52,7 +54,7 @@ def load_data(file):
         if file == DATA_FILE:
             data = get_default_data()
         elif file == PLAYER_DB_FILE:
-            data = {} # Default is an empty player database
+            data = {} 
         save_data(data, file)
         return data
     try:
@@ -64,7 +66,6 @@ def load_data(file):
 def save_data(data, file):
     """Saves data to a JSON file."""
     if file == DATA_FILE:
-        # Create a backup of the main auction data
         if os.path.exists(DATA_FILE):
             shutil.copy(DATA_FILE, BACKUP_FILE)
     
@@ -120,6 +121,54 @@ async def send_status_embed(interaction: discord.Interaction, title_suffix=""):
     except discord.errors.InteractionResponded:
         await interaction.followup.send(embed=embed)
 
+# --- NEW: Auto-Auction Functions ---
+
+async def call_next_player(channel: discord.TextChannel):
+    """Puts the next player from the queue on the block."""
+    if bot.current_auction_task:
+        bot.current_auction_task.cancel()
+        bot.current_auction_task = None
+        
+    data = load_data(DATA_FILE)
+    
+    # Check if draft mode should start
+    if await check_and_start_draft(channel):
+        return # Draft mode has been initiated, stop auction queue
+
+    if data["auction_queue_index"] >= len(data["auction_queue"]):
+        await channel.send("🎉 **The auction queue is empty!** 🎉\nAll players have been auctioned. Moving to Draft Mode.")
+        data["auction_state"] = "idle" # Set to idle before starting draft
+        save_data(data, DATA_FILE)
+        await check_and_start_draft(channel) # This will now start the draft
+        return
+
+    player_key = data["auction_queue"][data["auction_queue_index"]]
+    data["auction_queue_index"] += 1
+    
+    player_db = load_data(PLAYER_DB_FILE)
+    
+    if player_key not in player_db:
+        await channel.send(f"Player key `{player_key}` not in database. Skipping...")
+        save_data(data, DATA_FILE)
+        await call_next_player(channel) # Immediately call the next one
+        return
+        
+    player = player_db[player_key]
+    
+    # Set auction state
+    data["auction_state"] = "bidding"
+    data["on_the_block"] = player
+    data["current_bid"] = player["base_price"]
+    data["current_bidder"] = None # No bidder yet
+    save_data(data, DATA_FILE)
+    
+    # Announce the new player
+    embed = discord.Embed(
+        title=f"🔔 ON THE BLOCK: {player['name']} ({player['ovr']} OVR) 🔔",
+        description=f"Team: **{player['team']}**\nBidding starts at: **${player['base_price']:,}**",
+        color=discord.Color.blue()
+    )
+    await channel.send(embed=embed)
 
 # --- Auction Countdown Logic ---
 
@@ -139,12 +188,9 @@ async def auction_countdown(channel: discord.TextChannel, player_name: str, fina
         await asyncio.sleep(BID_COUNTDOWN_SECONDS)
         
         # --- SOLD! ---
-        # If we got here without being cancelled, the player is sold.
-        data = load_data(DATA_FILE) # Re-load data in case it changed
+        data = load_data(DATA_FILE)
         
-        # Final checks
         if data["auction_state"] != "bidding" or not data["on_the_block"] or data["on_the_block"]["name"] != player_name:
-            await channel.send("Auction was cancelled or changed. Sale voided.")
             bot.current_auction_task = None
             return
 
@@ -154,20 +200,19 @@ async def auction_countdown(channel: discord.TextChannel, player_name: str, fina
              return
              
         manager = data["managers"][bidder_key]
+        player = data["on_the_block"] # Get OVR from here
         
         # Process Sale
         manager["budget"] -= final_bid
         manager["spent"] += final_bid
-        manager["players"].append(f"{player_name} (${final_bid/1_000_000:.0f}M)")
+        manager["players"].append(f"{player_name} ({player['ovr']} OVR) - ${final_bid/1_000_000:.0f}M")
         
-        # Remove from player DB
         player_db = load_data(PLAYER_DB_FILE)
         if player_name.lower() in player_db:
             player_db.pop(player_name.lower())
             save_data(player_db, PLAYER_DB_FILE)
         
-        # Reset auction state
-        data["auction_state"] = "idle"
+        data["auction_state"] = "idle" # Set to idle temporarily
         data["on_the_block"] = None
         data["current_bid"] = 0
         data["current_bidder"] = None
@@ -181,11 +226,12 @@ async def auction_countdown(channel: discord.TextChannel, player_name: str, fina
         
         bot.current_auction_task = None
         
-        # Check for Draft Mode
-        await check_and_start_draft(channel)
+        # Automatically call the next player
+        await channel.send("Getting the next player...")
+        await asyncio.sleep(2) # Brief pause
+        await call_next_player(channel)
 
     except asyncio.CancelledError:
-        # This is expected! It means another bid came in.
         await channel.send("...Bid interrupted! The auction continues! ⏳")
         return
 
@@ -198,7 +244,7 @@ async def steal_countdown(channel: discord.TextChannel, player_name: str, base_p
         
     drafter_name = data["managers"][drafter_key]["name"]
 
-    await channel.send(f"**{drafter_name}** has drafted **{player_name}**.\n"
+    await channel.send(f"**{drafter_name}** has drafted **{player_name}** ({data['on_the_block']['ovr']} OVR).\n"
                        f"The steal price is **${base_price:,}**.\n"
                        f"Any manager with funds has **{STEAL_COUNTDOWN_SECONDS}** seconds to `/steal`! ⏳")
     
@@ -206,10 +252,10 @@ async def steal_countdown(channel: discord.TextChannel, player_name: str, base_p
         await asyncio.sleep(STEAL_COUNTDOWN_SECONDS)
         
         # --- NOT STOLEN! ---
-        data = load_data(DATA_FILE) # Re-load
+        data = load_data(DATA_FILE)
         if data["auction_state"] != "drafting" or not data["on_the_block"] or data["on_the_block"]["name"] != player_name:
             bot.current_steal_task = None
-            return # A steal must have occurred or auction was reset
+            return
 
         if drafter_key not in data["managers"]:
              await channel.send(f"Error: Drafter {drafter_key} no longer exists. Pick voided.")
@@ -217,12 +263,12 @@ async def steal_countdown(channel: discord.TextChannel, player_name: str, base_p
              return
 
         manager = data["managers"][drafter_key]
-        manager["players"].append(f"{player_name} (Draft)")
+        player = data["on_the_block"] # Get OVR from here
+        manager["players"].append(f"{player['name']} ({player['ovr']} OVR) - Draft")
         
-        # Remove from player DB
         player_db = load_data(PLAYER_DB_FILE)
         if player_name.lower() in player_db:
-            player_db.pop(player_name.lower())
+            player_db.pop(player_key)
             save_data(player_db, PLAYER_DB_FILE)
 
         data["on_the_block"] = None
@@ -232,11 +278,9 @@ async def steal_countdown(channel: discord.TextChannel, player_name: str, base_p
         await channel.send(f"✅ **NOT STOLEN!** **{player_name}** officially joins **{drafter_name}**'s team!")
         bot.current_steal_task = None
         
-        # Move to next draft pick
         await advance_draft(channel)
 
     except asyncio.CancelledError:
-        # This means someone used /steal!
         await channel.send("...Steal initiated! The auction is now live! 💰")
         return
 
@@ -245,11 +289,9 @@ async def steal_countdown(channel: discord.TextChannel, player_name: str, base_p
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
-    # Ensure data files exist
     load_data(DATA_FILE)
     load_data(PLAYER_DB_FILE)
     
-    # Sync slash commands
     try:
         synced = await bot.tree.sync()
         print(f"Synced {len(synced)} command(s)")
@@ -257,6 +299,74 @@ async def on_ready():
         print(f"Failed to sync commands: {e}")
     
     print('------')
+
+# --- NEW: Message-Based Bidding ---
+
+@bot.event
+async def on_message(message: discord.Message):
+    if message.author == bot.user:
+        return # Ignore the bot's own messages
+    
+    # This ensures slash commands are still processed
+    await bot.process_commands(message)
+
+    data = load_data(DATA_FILE)
+    
+    # Only listen for bids if the auction is in "bidding" state
+    if data["auction_state"] != "bidding":
+        return
+
+    # Try to parse the message as a number
+    try:
+        amount_in_millions = int(message.content)
+    except ValueError:
+        return # Not a number, ignore
+
+    # --- It's a bid! ---
+    bidder_key = message.author.display_name.lower()
+    if bidder_key not in data["managers"]:
+        await message.channel.send(f"🚫 {message.author.mention}, you are not a registered manager. Ask an admin to add you.", delete_after=10)
+        return
+
+    manager = data["managers"][bidder_key]
+    player = data["on_the_block"]
+    new_bid = amount_in_millions * 1_000_000
+    
+    # --- ALARM CHECKS ---
+    if new_bid <= data["current_bid"]:
+        await message.channel.send(f"🚫 **BID NOT VIABLE!** {message.author.mention}, your bid of **${new_bid:,}** must be *higher* than the current bid of **${data['current_bid']:,}**.", delete_after=10)
+        return
+        
+    if new_bid > manager["budget"]:
+        await message.channel.send(f"🚫 **MONEY OVER!** {message.author.mention}, you cannot afford this bid.\n"
+                                   f"Your Budget: **${manager['budget']:,}** | Your Bid: **${new_bid:,}**", delete_after=10)
+        return
+
+    player_cap = data.get("player_cap", DEFAULT_PLAYER_CAP)
+    player_count = get_player_count(manager)
+    if player_count >= player_cap:
+        await message.channel.send(f"🚫 **TEAM CAP FULL!** {message.author.mention}, you already have {player_cap} players.", delete_after=10)
+        return
+    
+    if data["current_bidder"] == bidder_key:
+        await message.channel.send(f"❌ {message.author.mention}, you are already the highest bidder!", delete_after=10)
+        return
+        
+    # --- BID ACCEPTED ---
+    
+    # Cancel the previous countdown
+    if bot.current_auction_task:
+        bot.current_auction_task.cancel()
+    
+    # Update the auction state
+    data["current_bid"] = new_bid
+    data["current_bidder"] = bidder_key
+    save_data(data, DATA_FILE)
+    
+    # Start the new countdown
+    bot.current_auction_task = bot.loop.create_task(
+        auction_countdown(message.channel, player["name"], new_bid, bidder_key)
+    )
 
 # --- Admin Slash Commands ---
 
@@ -266,7 +376,6 @@ async def reset_command(interaction: discord.Interaction):
     data = get_default_data()
     save_data(data, DATA_FILE)
     
-    # Reset player DB from backup if one exists, otherwise clear it
     if os.path.exists(PLAYER_DB_FILE + ".bak"):
         shutil.copy(PLAYER_DB_FILE + ".bak", PLAYER_DB_FILE)
         await interaction.response.send_message("🚨 **AUCTION RESET!** 🚨\nAll managers, players, and budgets cleared. Player database reset from backup.")
@@ -373,17 +482,14 @@ async def resume_command(interaction: discord.Interaction):
         bot.current_auction_task = bot.loop.create_task(
             auction_countdown(interaction.channel, data["on_the_block"]["name"], data["current_bid"], data["current_bidder"])
         )
-    elif data["on_the_block"] and data["draft_order"]: # Check if draft has started
+    elif data["on_the_block"] and data["draft_order"]: 
          # Resuming a draft steal
         data["auction_state"] = "drafting"
         save_data(data, DATA_FILE)
-        # Determine the drafter key. If index is 0, it's the first pick. Otherwise, it's the previous pick.
         drafter_key_index = data["draft_pick_index"]
         if drafter_key_index == 0:
-             # This assumes we paused *during* the first pick's steal window
              drafter_key = data["draft_order"][0]
         else:
-             # This resumes the countdown for the pick that was just made
              drafter_key = data["draft_order"][drafter_key_index - 1] 
              
         bot.current_steal_task = bot.loop.create_task(
@@ -395,7 +501,7 @@ async def resume_command(interaction: discord.Interaction):
         save_data(data, DATA_FILE)
 
 
-@tree.command(name="unsold", description="Marks the player on the block as unsold.")
+@tree.command(name="unsold", description="Marks the player on the block as unsold and calls the next player.")
 @commands.has_permissions(administrator=True)
 async def unsold_command(interaction: discord.Interaction):
     data = load_data(DATA_FILE)
@@ -403,28 +509,30 @@ async def unsold_command(interaction: discord.Interaction):
         await interaction.response.send_message("❌ No auction is currently active.", ephemeral=True)
         return
         
-    # Cancel any running task
     if bot.current_auction_task:
         bot.current_auction_task.cancel()
         bot.current_auction_task = None
 
     player_name = data["on_the_block"]["name"]
-    data["auction_state"] = "idle"
+    data["auction_state"] = "idle" # Set to idle temporarily
     data["on_the_block"] = None
     data["current_bid"] = 0
     data["current_bidder"] = None
     save_data(data, DATA_FILE)
 
-    await interaction.response.send_message(f"🚫 **{player_name}** is **UNSOLD** and returns to the player pool.\n"
-                                            "The auction block is now clear.")
+    await interaction.response.send_message(f"🚫 **{player_name}** is **UNSOLD** and returns to the player pool.")
+    
+    # Automatically call the next player
+    await interaction.channel.send("Getting the next player...")
+    await asyncio.sleep(2) # Brief pause
+    await call_next_player(interaction.channel)
 
 # --- Player Database Commands ---
 
 @tree.command(name="editplayer", description="Add or edit a player in the player database.")
-@discord.app_commands.describe(name="Player's full name (use quotes)", team="Player's real-life team", base_price="Base price in millions (e.g., 10)")
+@discord.app_commands.describe(name="Player's full name (use quotes)", team="Player's real-life team", ovr="Player OVR (e.g., 88)", base_price="Base price in millions (e.g., 10)")
 @commands.has_permissions(administrator=True)
-async def editplayer_command(interaction: discord.Interaction, name: str, team: str, base_price: int):
-    # Make a one-time backup of the player DB at the start of the auction
+async def editplayer_command(interaction: discord.Interaction, name: str, team: str, ovr: int, base_price: int):
     if not os.path.exists(PLAYER_DB_FILE + ".bak"):
         shutil.copy(PLAYER_DB_FILE, PLAYER_DB_FILE + ".bak")
         
@@ -433,11 +541,12 @@ async def editplayer_command(interaction: discord.Interaction, name: str, team: 
     player_db[key] = {
         "name": name,
         "team": team,
+        "ovr": ovr,
         "base_price": base_price * 1_000_000
     }
     save_data(player_db, PLAYER_DB_FILE)
     await interaction.response.send_message(f"✅ **Player Database Updated!**\n"
-                                          f"**{name}** (Team: {team}, Base Price: ${base_price:,}M)")
+                                          f"**{name}** ({ovr} OVR, Team: {team}, Base Price: ${base_price:,}M)")
 
 @tree.command(name="listplayers", description="Lists all available players from the database.")
 async def listplayers_command(interaction: discord.Interaction):
@@ -449,8 +558,11 @@ async def listplayers_command(interaction: discord.Interaction):
     embed = discord.Embed(title="Available Players", color=discord.Color.gold())
     
     player_list = []
-    for player in player_db.values():
-        player_list.append(f"• **{player['name']}** (Team: {player['team']}, Base: ${player['base_price']:,})")
+    # Sort by OVR, then by name
+    sorted_players = sorted(player_db.values(), key=lambda p: (-p['ovr'], p['name']))
+    
+    for player in sorted_players:
+        player_list.append(f"• **{player['name']}** ({player['ovr']} OVR) - Team: {player['team']}, Base: ${player['base_price']:,}")
 
     description = "\n".join(player_list)
     if len(description) > 4000:
@@ -470,118 +582,100 @@ async def playerinfo_command(interaction: discord.Interaction, name: str):
         return
         
     player = player_db[key]
-    embed = discord.Embed(title=player['name'], color=discord.Color.blue())
+    embed = discord.Embed(title=f"{player['name']} ({player['ovr']} OVR)", color=discord.Color.blue())
     embed.add_field(name="Real Team", value=player['team'], inline=True)
     embed.add_field(name="Base Price", value=f"${player['base_price']:,}", inline=True)
     await interaction.response.send_message(embed=embed)
 
 # --- Live Auction Commands ---
 
-@tree.command(name="nominate", description="Nominate a player for auction!")
-@discord.app_commands.describe(name="The name of the player to nominate")
-async def nominate_command(interaction: discord.Interaction, name: str):
+@tree.command(name="start", description="STARTS the tiered, automatic auction!")
+@commands.has_permissions(administrator=True)
+async def start_command(interaction: discord.Interaction):
     data = load_data(DATA_FILE)
     player_db = load_data(PLAYER_DB_FILE)
     
     if data["auction_state"] != "idle":
-        await interaction.response.send_message("❌ Cannot nominate! An auction or draft is already in progress.", ephemeral=True)
+        await interaction.response.send_message("❌ Cannot start! An auction or draft is already in progress.", ephemeral=True)
         return
     
-    key = name.lower()
-    if key not in player_db:
-        await interaction.response.send_message(f"❌ Player **{name}** not found in the database. Use `/editplayer` to add them first.", ephemeral=True)
+    if not data["managers"]:
+        await interaction.response.send_message("❌ Cannot start! Add managers with `/addmanager` first.", ephemeral=True)
+        return
+
+    if not player_db:
+        await interaction.response.send_message("❌ Cannot start! The player database is empty.", ephemeral=True)
+        return
+
+    await interaction.response.send_message("🚀 **Auction Starting!**\nBuilding player queue...")
+
+    # --- Build the Queue ---
+    retained_players = {m['retained_player'].lower() for m in data["managers"].values() if m['retained_player']}
+    
+    tier1 = [] # 86+
+    tier2 = [] # 83-85
+    tier3 = [] # <=82
+    
+    for key, player in player_db.items():
+        if key in retained_players:
+            continue # Skip retained player
+        
+        ovr = player.get('ovr', 0)
+        if ovr >= 86:
+            tier1.append(key)
+        elif ovr >= 83:
+            tier2.append(key)
+        else:
+            tier3.append(key)
+            
+    # Shuffle each tier
+    random.shuffle(tier1)
+    random.shuffle(tier2)
+    random.shuffle(tier3)
+    
+    # Create master queue
+    data["auction_queue"] = tier1 + tier2 + tier3
+    data["auction_queue_index"] = 0
+    
+    if not data["auction_queue"]:
+        await interaction.followup.send("❌ Cannot start! No players are available after filtering retained players.")
         return
         
-    player = player_db[key]
+    await interaction.followup.send(f"✅ **Auction Queue is ready!**\n"
+                                     f"• **Tier 1 (86+ OVR):** {len(tier1)} players\n"
+                                     f"• **Tier 2 (83-85 OVR):** {len(tier2)} players\n"
+                                     f"• **Tier 3 (<=82 OVR):** {len(tier3)} players\n"
+                                     f"Total: **{len(data['auction_queue'])}** players on the block.\n\n"
+                                     f"Calling the first player...")
     
-    # Set auction state
-    data["auction_state"] = "bidding"
-    data["on_the_block"] = player
-    data["current_bid"] = player["base_price"]
-    data["current_bidder"] = None # No bidder yet
     save_data(data, DATA_FILE)
-    
-    # Send opening message
-    await interaction.response.send_message(f"🔔 **PLAYER NOMINATED!** 🔔\n"
-                                          f"**{player['name']}** (Team: {player['team']}) is on the block!\n"
-                                          f"Bidding starts at **${player['base_price']:,}**!\n"
-                                          f"Use `/bid [amount_in_M]` to bid.")
+    await asyncio.sleep(3) # Dramatic pause
+    await call_next_player(interaction.channel)
 
-@tree.command(name="bid", description="Place a bid on the current player.")
-@discord.app_commands.describe(amount_in_millions="Your bid amount (e.g., 50)")
-async def bid_command(interaction: discord.Interaction, amount_in_millions: int):
-    data = load_data(DATA_FILE)
-    
-    if data["auction_state"] != "bidding":
-        await interaction.response.send_message("❌ No auction is currently active.", ephemeral=True)
-        return
-        
-    bidder_key = interaction.user.display_name.lower()
-    if bidder_key not in data["managers"]:
-        await interaction.response.send_message("❌ You are not a registered manager in this auction. Ask an admin to add you with `/addmanager`.", ephemeral=True)
-        return
-
-    manager = data["managers"][bidder_key]
-    player = data["on_the_block"]
-    new_bid = amount_in_millions * 1_000_000
-    
-    # --- ALARM CHECKS ---
-    if new_bid <= data["current_bid"]:
-        await interaction.response.send_message(f"🚫 **BID NOT VIABLE!** Your bid of **${new_bid:,}** must be *higher* than the current bid of **${data['current_bid']:,}**.", ephemeral=True)
-        return
-        
-    if new_bid > manager["budget"]:
-        await interaction.response.send_message(f"🚫 **MONEY OVER!** You cannot afford this bid.\n"
-                                              f"Your Budget: **${manager['budget']:,}** | Your Bid: **${new_bid:,}**", ephemeral=True)
-        return
-
-    player_cap = data.get("player_cap", DEFAULT_PLAYER_CAP)
-    player_count = get_player_count(manager)
-    if player_count >= player_cap:
-        await interaction.response.send_message(f"🚫 **TEAM CAP FULL!** You already have {player_cap} players.", ephemeral=True)
-        return
-    
-    if data["current_bidder"] == bidder_key:
-        await interaction.response.send_message("❌ You are already the highest bidder!", ephemeral=True)
-        return
-        
-    # --- BID ACCEPTED ---
-    
-    # Acknowledge the bid immediately
-    await interaction.response.send_message(f"Bid of ${new_bid:,} by {manager['name']} accepted...", ephemeral=True)
-    
-    # Cancel the previous countdown
-    if bot.current_auction_task:
-        bot.current_auction_task.cancel()
-    
-    # Update the auction state
-    data["current_bid"] = new_bid
-    data["current_bidder"] = bidder_key
-    save_data(data, DATA_FILE)
-    
-    # Start the new countdown
-    bot.current_auction_task = bot.loop.create_task(
-        auction_countdown(interaction.channel, player["name"], new_bid, bidder_key)
-    )
 
 # --- Draft Mode Commands ---
 
 async def check_and_start_draft(channel: discord.TextChannel):
-    """Checks if draft mode should be triggered and starts it."""
+    """Checks if draft mode should be triggered and starts it. Returns True if draft started."""
     data = load_data(DATA_FILE)
-    if data["auction_state"] != "idle":
-        return # Don't start if something else is happening
+    if data["auction_state"] == "drafting":
+        return True # Already in draft mode
+        
+    if data["auction_state"] not in ["idle", "bidding"]:
+        return False # Paused or other state
         
     managers_at_zero = get_managers_with_zero_money(data)
     
     if managers_at_zero >= 3:
+        if bot.current_auction_task: # Cancel any pending sale
+            bot.current_auction_task.cancel()
+            bot.current_auction_task = None
+            
         await channel.send(f"🚨 **{managers_at_zero} MANAGERS** have no money! **DRAFT MODE INITIATED!** 🚨")
         
-        # Create draft order: managers with $0 first, then by lowest budget
         zero_money_managers = [k for k, m in data["managers"].items() if m["budget"] == 0]
         money_managers = [k for k, m in data["managers"].items() if m["budget"] > 0]
         
-        # Sort money managers by lowest budget
         money_managers.sort(key=lambda k: data["managers"][k]["budget"])
         
         draft_order = zero_money_managers + money_managers
@@ -592,6 +686,8 @@ async def check_and_start_draft(channel: discord.TextChannel):
         save_data(data, DATA_FILE)
         
         await advance_draft(channel)
+        return True
+    return False
 
 async def advance_draft(channel: discord.TextChannel):
     """Announces the next pick in the draft."""
@@ -601,7 +697,6 @@ async def advance_draft(channel: discord.TextChannel):
         
     idx = data["draft_pick_index"]
     
-    # Check if draft is over (e.g., all teams full)
     all_full = all(get_player_count(m) >= data["player_cap"] for m in data["managers"].values())
     if all_full:
         await channel.send("🎉 **All teams are full! The draft is complete!** 🎉")
@@ -612,12 +707,11 @@ async def advance_draft(channel: discord.TextChannel):
     drafter_key = data["draft_order"][idx]
     drafter_name = data["managers"][drafter_key]["name"]
     
-    # Skip manager if their team is full
     if get_player_count(data["managers"][drafter_key]) >= data["player_cap"]:
         await channel.send(f"Skipping **{drafter_name}** (team full).")
         data["draft_pick_index"] = (idx + 1) % len(data["draft_order"])
         save_data(data, DATA_FILE)
-        await advance_draft(channel) # Recursive call to next pick
+        await advance_draft(channel) 
         return
 
     await channel.send(f"It is **Pick #{idx + 1}**.\n"
@@ -627,7 +721,7 @@ async def advance_draft(channel: discord.TextChannel):
 @commands.has_permissions(administrator=True)
 async def startdraft_command(interaction: discord.Interaction):
     data = load_data(DATA_FILE)
-    if data["auction_state"] != "idle":
+    if data["auction_state"] not in ["idle", "paused"]:
         await interaction.response.send_message("❌ Cannot start draft! Auction or another draft is in progress.", ephemeral=True)
         return
         
@@ -647,7 +741,6 @@ async def draft_command(interaction: discord.Interaction, name: str):
     drafter_key = data["draft_order"][data["draft_pick_index"]]
     drafter_name = data["managers"][drafter_key]["name"]
     
-    # Check if it's the user's turn
     user_key = interaction.user.display_name.lower()
     
     if user_key != drafter_key:
@@ -664,18 +757,16 @@ async def draft_command(interaction: discord.Interaction, name: str):
     player = player_db[player_key]
     base_price = player["base_price"]
     
-    # Check if anyone *can* steal
     can_be_stolen = any(m["budget"] >= base_price for k, m in data["managers"].items() if k != drafter_key)
     
     await interaction.response.send_message(f"**{drafter_name}** is on the clock and selects **{player['name']}**...", ephemeral=True)
 
     if not can_be_stolen:
-        # No one has money for a steal, process immediately
-        await interaction.channel.send(f"**{drafter_name}** selects **{player['name']}**.\n"
+        await interaction.channel.send(f"**{drafter_name}** selects **{player['name']}** ({player['ovr']} OVR).\n"
                                        "No managers have enough money to steal. The pick is final!")
         
         manager = data["managers"][drafter_key]
-        manager["players"].append(f"{player['name']} (Draft)")
+        manager["players"].append(f"{player['name']} ({player['ovr']} OVR) - Draft")
         player_db.pop(player_key)
         save_data(player_db, PLAYER_DB_FILE)
         
@@ -729,17 +820,14 @@ async def steal_command(interaction: discord.Interaction):
     # --- STEAL ACCEPTED ---
     await interaction.response.send_message(f"**{manager['name']}** is stealing!", ephemeral=True)
 
-    # Cancel the steal countdown
     bot.current_steal_task.cancel()
     bot.current_steal_task = None
     
-    # Set up the auction
     data["auction_state"] = "bidding"
     data["current_bid"] = base_price
     data["current_bidder"] = stealer_key
     save_data(data, DATA_FILE)
     
-    # Start the auction countdown
     bot.current_auction_task = bot.loop.create_task(
         auction_countdown(interaction.channel, player["name"], base_price, stealer_key)
     )
@@ -805,16 +893,20 @@ async def retain_command(interaction: discord.Interaction, player_name: str, man
         await interaction.response.send_message(f"⚠️ **{manager['name']}** has already retained **{manager['retained_player']}**! Use `/undo` to fix.", ephemeral=True)
         return
         
-    manager["retained_player"] = player_name
-    
-    # Remove retained player from player DB
     player_db = load_data(PLAYER_DB_FILE)
-    if player_name.lower() in player_db:
-        player_db.pop(player_name.lower())
-        save_data(player_db, PLAYER_DB_FILE)
+    player_key = player_name.lower()
     
+    if player_key not in player_db:
+        await interaction.response.send_message(f"❌ Player **{player_name}** not in database. Cannot retain.", ephemeral=True)
+        return
+        
+    player_data = player_db.pop(player_key) # Remove from DB
+    save_data(player_db, PLAYER_DB_FILE)
+    
+    manager["retained_player"] = f"{player_data['name']} ({player_data['ovr']} OVR)"
     save_data(data, DATA_FILE)
-    await interaction.response.send_message(f"✅ **{manager['name']}** has retained **{player_name}**!")
+    
+    await interaction.response.send_message(f"✅ **{manager['name']}** has retained **{player_data['name']}**!")
     await send_status_embed(interaction)
 
 # --- Error Handling ---
