@@ -3,1104 +3,1753 @@
     "name": "Kylian Mbappé",
     "team": "PSG",
     "base_price": 50000000,
-    "ovr": 91
-  },
-  "karim benzema": {
-    "name": "Karim Benzema",
-    "team": "Al-Ittihad",
-    "base_price": 50000000,
-    "ovr": 90
+    "ovr": 91,
+    "position": "ST",
+    "specialities": "Pace Merchant, Dribbler, Finisher",
+    "top_stats": "Pace: 97, Dribbling: 92, Finishing: 93",
+    "why_get_them": "The fastest and most explosive attacker in the game. A guaranteed goalscorer.",
+    "tactical_significance": "The ultimate weapon for any system. Excels in counter-attacks or as a lone striker."
   },
   "kevin de bruyne": {
     "name": "Kevin De Bruyne",
     "team": "Manchester City",
     "base_price": 50000000,
-    "ovr": 91
-  },
-  "lionel messi": {
-    "name": "Lionel Messi",
-    "team": "Inter Miami",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "robert lewandowski": {
-    "name": "Robert Lewandowski",
-    "team": "Barcelona",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "thibaut courtois": {
-    "name": "Thibaut Courtois",
-    "team": "Real Madrid",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "mohamed salah": {
-    "name": "Mohamed Salah",
-    "team": "Liverpool",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "manuel neuer": {
-    "name": "Manuel Neuer",
-    "team": "Bayern Munich",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "virgil van dijk": {
-    "name": "Virgil van Dijk",
-    "team": "Liverpool",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "cristiano ronaldo": {
-    "name": "Cristiano Ronaldo",
-    "team": "Al-Nassr",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "harry kane": {
-    "name": "Harry Kane",
-    "team": "Bayern Munich",
-    "base_price": 50000000,
-    "ovr": 90
-  },
-  "casemiro": {
-    "name": "Casemiro",
-    "team": "Manchester United",
-    "base_price": 40000000,
-    "ovr": 89
-  },
-  "alisson": {
-    "name": "Alisson",
-    "team": "Liverpool",
-    "base_price": 40000000,
-    "ovr": 89
-  },
-  "joshua kimmich": {
-    "name": "Joshua Kimmich",
-    "team": "Bayern Munich",
-    "base_price": 40000000,
-    "ovr": 89
-  },
-  "n'golo kante": {
-    "name": "N'Golo Kanté",
-    "team": "Al-Ittihad",
-    "base_price": 40000000,
-    "ovr": 89
-  },
-  "jan oblak": {
-    "name": "Jan Oblak",
-    "team": "Atlético Madrid",
-    "base_price": 40000000,
-    "ovr": 89
+    "ovr": 91,
+    "position": "CM",
+    "specialities": "Playmaker, Engine, Long Shot Taker",
+    "top_stats": "Passing: 93, Vision: 94, Shot Power: 91",
+    "why_get_them": "The best passer in the game, period. Can unlock any defense with a single ball.",
+    "tactical_significance": "The perfect #10 or offensive #8 in a 4-3-3. Will be the primary chance creator."
   },
   "erling haaland": {
     "name": "Erling Haaland",
     "team": "Manchester City",
     "base_price": 40000000,
-    "ovr": 91
+    "ovr": 91,
+    "position": "ST",
+    "specialities": "Poacher, Finisher, Physical, Pace Merchant",
+    "top_stats": "Finishing: 96, Pace: 93, Strength: 93",
+    "why_get_them": "A generational talent. An unstoppable combination of size, speed, and lethal finishing.",
+    "tactical_significance": "The ultimate target man and poacher. A pure #9 who will be the focal point of all attacks."
+  },
+  "karim benzema": {
+    "name": "Karim Benzema",
+    "team": "Al-Ittihad",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "CF",
+    "specialities": "Complete Forward, Playmaker, Clinical Finisher",
+    "top_stats": "Finishing: 92, Ball Control: 91, Positioning: 92",
+    "why_get_them": "The ultimate all-around forward. Scores, assists, and links up play better than almost anyone.",
+    "tactical_significance": "Perfect as a false 9 (CF) or in a two-striker system where he can drop deep and create."
+  },
+  "lionel messi": {
+    "name": "Lionel Messi",
+    "team": "Inter Miami",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "RW",
+    "specialities": "Dribbler, Playmaker, Finesse Shot, Set Piece Taker",
+    "top_stats": "Dribbling: 94, Passing: 90, Vision: 93",
+    "why_get_them": "The best dribbler and creator in the game. Unmatched on the ball and a free kick specialist.",
+    "tactical_significance": "Best used as a free-roaming RW or CAM where he can drift inside and create or score."
+  },
+  "robert lewandowski": {
+    "name": "Robert Lewandowski",
+    "team": "Barcelona",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "ST",
+    "specialities": "Poacher, Clinical Finisher, Physical",
+    "top_stats": "Finishing: 94, Positioning: 93, Strength: 89",
+    "why_get_them": "A pure goalscoring machine. If he gets a chance in the box, it's over.",
+    "tactical_significance": "The ideal lone striker (#9) in a possession-based system (4-3-3 or 4-2-3-1) that creates a high volume of chances."
+  },
+  "thibaut courtois": {
+    "name": "Thibaut Courtois",
+    "team": "Real Madrid",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "GK",
+    "specialities": "Shot Stopper, Goalkeeper One-on-Ones",
+    "top_stats": "Reflexes: 92, Handling: 89, Positioning: 89",
+    "why_get_them": "Arguably the best shot-stopper in the game. Wins you points on his own.",
+    "tactical_significance": "A reliable, traditional goalkeeper. Provides immense security for any defensive system."
+  },
+  "mohamed salah": {
+    "name": "Mohamed Salah",
+    "team": "Liverpool",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "RW",
+    "specialities": "Pace Merchant, Finisher, Dribbler",
+    "top_stats": "Pace: 91, Finishing: 93, Dribbling: 89",
+    "why_get_them": "A consistent and lethal goalscorer from the wing. His pace and finishing are elite.",
+    "tactical_significance": "A perfect inside forward in a 4-3-3. Will be your primary goal threat, cutting in from the right."
+  },
+  "manuel neuer": {
+    "name": "Manuel Neuer",
+    "team": "Bayern Munich",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "GK",
+    "specialities": "Sweeper Keeper, Leader",
+    "top_stats": "Kicking: 91, Reflexes: 89, Positioning: 89",
+    "why_get_them": "The original and best sweeper keeper. His distribution is as good as a midfielder.",
+    "tactical_significance": "Essential for a high-line defense. He acts as an 11th outfielder, stopping through balls."
+  },
+  "virgil van dijk": {
+    "name": "Virgil van Dijk",
+    "team": "Liverpool",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "CB",
+    "specialities": "Defensive Rock, Aerial Threat, Leader",
+    "top_stats": "Defending: 91, Strength: 93, Composure: 90",
+    "why_get_them": "A complete central defender. Dominant in the air, composed on the ball, and impossible to beat 1v1.",
+    "tactical_significance": "The anchor for any defense. His presence allows your full-backs to attack with confidence."
+  },
+  "cristiano ronaldo": {
+    "name": "Cristiano Ronaldo",
+    "team": "Al-Nassr",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "ST",
+    "specialities": "Clinical Finisher, Aerial Threat, Poacher",
+    "top_stats": "Finishing: 95, Shot Power: 93, Positioning: 94",
+    "why_get_them": "One of the greatest goalscorers of all time. His finishing and aerial ability are still unmatched.",
+    "tactical_significance": "A pure box-to-box striker. Needs service, but will convert any chance he gets."
+  },
+  "harry kane": {
+    "name": "Harry Kane",
+    "team": "Bayern Munich",
+    "base_price": 50000000,
+    "ovr": 90,
+    "position": "ST",
+    "specialities": "Complete Forward, Playmaker, Long Shot Taker",
+    "top_stats": "Finishing: 95, Passing: 86, Shot Power: 90",
+    "why_get_them": "The complete striker. Scores like a #9, assists like a #10. Elite passing.",
+    "tactical_significance": "Can play as a lone ST or drop deep as a CF to link up play with fast wingers."
+  },
+  "casemiro": {
+    "name": "Casemiro",
+    "team": "Manchester United",
+    "base_price": 40000000,
+    "ovr": 89,
+    "position": "CDM",
+    "specialities": "Defensive Rock, Tackler, Physical",
+    "top_stats": "Defending: 89, Physical: 90, Aggression: 92",
+    "why_get_them": "The best pure defensive midfielder in the world. A wall in front of your defense.",
+    "tactical_significance": "The perfect anchor in a 4-3-3 or a 4-2-3-1, providing complete defensive security."
+  },
+  "alisson": {
+    "name": "Alisson",
+    "team": "Liverpool",
+    "base_price": 40000000,
+    "ovr": 89,
+    "position": "GK",
+    "specialities": "Shot Stopper, Sweeper Keeper",
+    "top_stats": "Reflexes: 90, Positioning: 90, Kicking: 85",
+    "why_get_them": "A complete, modern goalkeeper. Elite 1v1, great distribution, and acrobatic.",
+    "tactical_significance": "Perfectly balanced for any system, whether you play a high line or sit deep."
+  },
+  "joshua kimmich": {
+    "name": "Joshua Kimmich",
+    "team": "Bayern Munich",
+    "base_price": 40000000,
+    "ovr": 89,
+    "position": "CDM",
+    "specialities": "Playmaker, Engine, Versatile",
+    "top_stats": "Passing: 88, Vision: 88, Stamina: 94",
+    "why_get_them": "A world-class deep-lying playmaker with a relentless engine. Can also play RB.",
+    "tactical_significance": "The 'regista' for a possession-heavy team. Controls the entire tempo of the game from deep."
+  },
+  "n'golo kante": {
+    "name": "N'Golo Kanté",
+    "team": "Al-Ittihad",
+    "base_price": 40000000,
+    "ovr": 89,
+    "position": "CDM",
+    "specialities": "Engine, Ball Winner, Tenacious",
+    "top_stats": "Stamina: 97, Def. Awareness: 90, Interceptions: 92",
+    "why_get_them": "He has three lungs. An unparalleled ball-winning machine who covers every blade of grass.",
+    "tactical_significance": "The perfect box-to-box or defensive midfielder in a 4-3-3. Does the work of two players."
+  },
+  "jan oblak": {
+    "name": "Jan Oblak",
+    "team": "Atlético Madrid",
+    "base_price": 40000000,
+    "ovr": 89,
+    "position": "GK",
+    "specialities": "Shot Stopper, Positional",
+    "top_stats": "Handling: 92, Reflexes: 89, Positioning: 90",
+    "why_get_them": "Incredible fundamentals. He catches everything and is rarely, if ever, out of position.",
+    "tactical_significance": "A pure, rock-solid shot-stopper. Ideal for a team that sits deep and invites shots."
   },
   "ederson": {
     "name": "Ederson",
     "team": "Manchester City",
     "base_price": 40000000,
-    "ovr": 89
-  },
-  "heung min son": {
-    "name": "Heung Min Son",
-    "team": "Tottenham",
-    "base_price": 40000000,
-    "ovr": 88
+    "ovr": 89,
+    "position": "GK",
+    "specialities": "Sweeper Keeper, Unmatched Kicking",
+    "top_stats": "GK Kicking: 93, GK Reflexes: 88, GK Positioning: 88",
+    "why_get_them": "His distribution is a weapon. He can launch a counter-attack from his own box.",
+    "tactical_significance": "The ultimate high-line sweeper keeper. He acts as an 11th outfielder, stopping through balls."
   },
   "neymar jr": {
     "name": "Neymar Jr",
     "team": "Al Hilal",
     "base_price": 40000000,
-    "ovr": 89
+    "ovr": 89,
+    "position": "LW",
+    "specialities": "Dribbler, Playmaker, 5-Star Skills",
+    "top_stats": "Dribbling: 93, Ball Control: 92, Agility: 94",
+    "why_get_them": "A true magician on the ball. If you love to skill and create, he's your man.",
+    "tactical_significance": "The ultimate creative LW or CAM. Needs a free role to drift and cause havoc."
   },
   "rodri": {
     "name": "Rodri",
     "team": "Manchester City",
     "base_price": 40000000,
-    "ovr": 89
+    "ovr": 89,
+    "position": "CDM",
+    "specialities": "Defensive Rock, Playmaker, Composed",
+    "top_stats": "Composure: 90, Def. Awareness: 88, Passing: 85",
+    "why_get_them": "The most complete CDM in the game. Unbeatable defensively and a world-class passer.",
+    "tactical_significance": "The perfect single pivot. He can anchor a 4-3-3 by himself, protecting the defense and starting attacks."
+  },
+  "heung min son": {
+    "name": "Heung Min Son",
+    "team": "Tottenham",
+    "base_price": 40000000,
+    "ovr": 88,
+    "position": "LW",
+    "specialities": "Clinical Finisher, Finesse Shot, Two-Footed",
+    "top_stats": "Finishing: 90, Shot Power: 88, Pace: 88",
+    "why_get_them": "One of the most clinical finishers in the game. His 5-star weak foot makes him a threat anywhere.",
+    "tactical_significance": "A goalscoring winger (Inside Forward). Perfect for a 4-3-3 or 4-2-3-1 where he is the main goal threat."
   },
   "toni kroos": {
     "name": "Toni Kroos",
     "team": "Real Madrid",
     "base_price": 40000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "CM",
+    "specialities": "Playmaker, Set Piece Taker, Composed",
+    "top_stats": "Passing: 92, Vision: 90, Composure: 92",
+    "why_get_them": "A midfield general with near-perfect passing. Dictates the entire pace of the game.",
+    "tactical_significance": "A deep-lying playmaker (regista). Sits in a 4-3-3 and sprays pinpoint passes to the wings."
   },
   "bernardo silva": {
     "name": "Bernardo Silva",
     "team": "Manchester City",
     "base_price": 40000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "CAM",
+    "specialities": "Dribbler, Engine, Playmaker",
+    "top_stats": "Dribbling: 92, Stamina: 93, Vision: 87",
+    "why_get_them": "A creative attacking midfielder with the work rate of a defensive mid. Incredibly press-resistant.",
+    "tactical_significance": "A versatile CAM, CM, or RW. His endless stamina is perfect for a high-pressing system."
   },
   "marquinhos": {
     "name": "Marquinhos",
     "team": "PSG",
     "base_price": 40000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "CB",
+    "specialities": "Defensive Rock, Composed, Leader",
+    "top_stats": "Def. Awareness: 90, Interceptions: 90, Jumping: 91",
+    "why_get_them": "A fast, intelligent, and composed modern center-back. Reads the game perfectly.",
+    "tactical_significance": "Perfect for a high-line defense. His pace and awareness allow him to handle quick strikers 1v1."
   },
   "ruben dias": {
     "name": "Rúben Dias",
     "team": "Manchester City",
     "base_price": 40000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "CB",
+    "specialities": "Defensive Rock, Physical, Tackler",
+    "top_stats": "Defending: 89, Strength: 90, Aggression: 90",
+    "why_get_them": "A traditional, no-nonsense defender. A pure wall that dominates attackers physically.",
+    "tactical_significance": "The leader of a back four. Sits deep and organizes the defensive line."
   },
   "luka modric": {
     "name": "Luka Modrić",
     "team": "Real Madrid",
     "base_price": 40000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "CM",
+    "specialities": "Playmaker, Dribbler, Composed",
+    "top_stats": "Passing: 89, Dribbling: 89, Vision: 91",
+    "why_get_them": "Ageless wonder. His creativity, agility, and flair on the ball are still world-class.",
+    "tactical_significance": "A perfect offensive-minded #8 in a 4-3-3. Will be the primary ball-carrier from midfield."
   },
   "marc-andre ter stegen": {
     "name": "Marc-André ter Stegen",
     "team": "Barcelona",
     "base_price": 40000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "GK",
+    "specialities": "Shot Stopper, Sweeper Keeper",
+    "top_stats": "Reflexes: 90, Kicking: 88, Positioning: 86",
+    "why_get_them": "A complete modern keeper who is as good with his feet as he is with his hands.",
+    "tactical_significance": "Ideal for a possession-based team that wants to build up from the back."
   },
   "joao cancelo": {
     "name": "João Cancelo",
     "team": "Barcelona",
     "base_price": 40000000,
-    "ovr": 88
-  },
-  "frenkie de jong": {
-    "name": "Frenkie de Jong",
-    "team": "Barcelona",
-    "base_price": 40000000,
-    "ovr": 87
-  },
-  "antonio rudiger": {
-    "name": "Antonio Rüdiger",
-    "team": "Real Madrid",
-    "base_price": 40000000,
-    "ovr": 87
-  },
-  "kalidou koulibaly": {
-    "name": "Kalidou Koulibaly",
-    "team": "Al Hilal",
-    "base_price": 40000000,
-    "ovr": 87
-  },
-  "trent alexander-arnold": {
-    "name": "Trent Alexander-Arnold",
-    "team": "Liverpool",
-    "base_price": 40000000,
-    "ovr": 87
-  },
-  "bruno fernandes": {
-    "name": "Bruno Fernandes",
-    "team": "Manchester United",
-    "base_price": 40000000,
-    "ovr": 87
-  },
-  "gianluigi donnarumma": {
-    "name": "Gianluigi Donnarumma",
-    "team": "PSG",
-    "base_price": 40000000,
-    "ovr": 87
-  },
-  "federico valverde": {
-    "name": "Federico Valverde",
-    "team": "Real Madrid",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "david alaba": {
-    "name": "David Alaba",
-    "team": "Real Madrid",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "eder militao": {
-    "name": "Éder Militão",
-    "team": "Real Madrid",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "andrew robertson": {
-    "name": "Andrew Robertson",
-    "team": "Liverpool",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "aymeric laporte": {
-    "name": "Aymeric Laporte",
-    "team": "Al-Nassr",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "milan skriniar": {
-    "name": "Milan Škriniar",
-    "team": "PSG",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "kingsley coman": {
-    "name": "Kingsley Coman",
-    "team": "Bayern Munich",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "vinicius jr.": {
-    "name": "Vinícius Jr.",
-    "team": "Real Madrid",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "rafael leao": {
-    "name": "Rafael Leão",
-    "team": "AC Milan",
-    "base_price": 30000000,
-    "ovr": 86
-  },
-  "theo hernandez": {
-    "name": "Theo Hernández",
-    "team": "AC Milan",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "sadio mane": {
-    "name": "Sadio Mané",
-    "team": "Al-Nassr",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "paul pogba": {
-    "name": "Paul Pogba",
-    "team": "Juventus",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "leon goretzka": {
-    "name": "Leon Goretzka",
-    "team": "Bayern Munich",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "marco verratti": {
-    "name": "Marco Verratti",
-    "team": "Al-Arabi",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "niklas sule": {
-    "name": "Niklas Süle",
-    "team": "Borussia Dortmund",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "ciro immobile": {
-    "name": "Ciro Immobile",
-    "team": "Lazio",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "jude bellingham": {
-    "name": "Jude Bellingham",
-    "team": "Real Madrid",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "jamal musiala": {
-    "name": "Jamal Musiala",
-    "team": "Bayern Munich",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "christopher nkunku": {
-    "name": "Christopher Nkunku",
-    "team": "Chelsea",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "matthijs de ligt": {
-    "name": "Matthijs de Ligt",
-    "team": "Bayern Munich",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "pedri": {
-    "name": "Pedri",
-    "team": "Barcelona",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "nicolo barella": {
-    "name": "Nicolò Barella",
-    "team": "Inter Milan",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "lautaro martinez": {
-    "name": "Lautaro Martínez",
-    "team": "Inter Milan",
-    "base_price": 30000000,
-    "ovr": 87
-  },
-  "kyle walker": {
-    "name": "Kyle Walker",
-    "team": "Manchester City",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "riyad mahrez": {
-    "name": "Riyad Mahrez",
-    "team": "Al-Ahli",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "marcos acuna": {
-    "name": "Marcos Acuña",
-    "team": "Sevilla",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "diogo jota": {
-    "name": "Diogo Jota",
-    "team": "Liverpool",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "phil foden": {
-    "name": "Phil Foden",
-    "team": "Manchester City",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "marcus rashford": {
-    "name": "Marcus Rashford",
-    "team": "Manchester United",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "bukayo saka": {
-    "name": "Bukayo Saka",
-    "team": "Arsenal",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "dominik szoboszlai": {
-    "name": "Dominik Szoboszlai",
-    "team": "Liverpool",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "declan rice": {
-    "name": "Declan Rice",
-    "team": "Arsenal",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "sandro tonali": {
-    "name": "Sandro Tonali",
-    "team": "Newcastle Utd",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "josko gvardiol": {
-    "name": "Joško Gvardiol",
-    "team": "Manchester City",
-    "base_price": 30000000,
-    "ovr": 85
-  },
-  "stefan de vrij": {
-    "name": "Stefan de Vrij",
-    "team": "Inter",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "koke": {
-    "name": "Koke",
-    "team": "Atlético Madrid",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "yann sommer": {
-    "name": "Yann Sommer",
-    "team": "Inter",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "dusan tadic": {
-    "name": "Dušan Tadić",
-    "team": "Fenerbahçe",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "marcos llorente": {
-    "name": "Marcos Llorente",
-    "team": "Atlético Madrid",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "raheem sterling": {
-    "name": "Raheem Sterling",
-    "team": "Chelsea",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "paulo dybala": {
-    "name": "Paulo Dybala",
-    "team": "Roma",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "thomas muller": {
-    "name": "Thomas Müller",
-    "team": "Bayern Munich",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "raphael varane": {
-    "name": "Raphaël Varane",
-    "team": "Manchester United",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "jules kounde": {
-    "name": "Jules Koundé",
-    "team": "Barcelona",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "achraf hakimi": {
-    "name": "Achraf Hakimi",
-    "team": "PSG",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "gavi": {
-    "name": "Gavi",
-    "team": "Barcelona",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "dayot upamecano": {
-    "name": "Dayot Upamecano",
-    "team": "Bayern Munich",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "reece james": {
-    "name": "Reece James",
-    "team": "Chelsea",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "dusan vlahovic": {
-    "name": "Dušan Vlahović",
-    "team": "Juventus",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "fikayo tomori": {
-    "name": "Fikayo Tomori",
-    "team": "AC Milan",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "alphonso davies": {
-    "name": "Alphonso Davies",
-    "team": "Bayern Munich",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "rodrygo": {
-    "name": "Rodrygo",
-    "team": "Real Madrid",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "florian wirtz": {
-    "name": "Florian Wirtz",
-    "team": "Bayer Leverkusen",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "dani carvajal": {
-    "name": "Dani Carvajal",
-    "team": "Real Madrid",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "kieran trippier": {
-    "name": "Kieran Trippier",
-    "team": "Newcastle Utd",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "leroy sane": {
-    "name": "Leroy Sané",
-    "team": "Bayern Munich",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "ronald araujo": {
-    "name": "Ronald Araújo",
-    "team": "Barcelona",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "lisandro martinez": {
-    "name": "Lisandro Martínez",
-    "team": "Manchester United",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "thiago silva": {
-    "name": "Thiago Silva",
-    "team": "Chelsea",
-    "base_price": 20000000,
-    "ovr": 84
+    "ovr": 88,
+    "position": "LB",
+    "specialities": "Offensive Full-back, Dribbler, Playmaker",
+    "top_stats": "Dribbling: 87, Crossing: 88, Pace: 85",
+    "why_get_them": "A midfielder playing at full-back. One of the most creative defenders in the game.",
+    "tactical_significance": "An inverted full-back who drifts into midfield to add an extra man and create chances."
   },
   "antoine griezmann": {
     "name": "Antoine Griezmann",
     "team": "Atlético Madrid",
     "base_price": 20000000,
-    "ovr": 88
+    "ovr": 88,
+    "position": "ST",
+    "specialities": "Playmaker, Finesse Shot, Engine",
+    "top_stats": "Vision: 89, Finesse Shot: 88, Stamina: 90",
+    "why_get_them": "A supremely intelligent and hard-working forward. He is a master of creating space and finding a pass.",
+    "tactical_significance": "The ultimate False 9 (CF) or support striker. Will drop deep to link play and still arrive in the box."
   },
-  "luis diaz": {
-    "name": "Luis Díaz",
-    "team": "Liverpool",
-    "base_price": 20000000,
-    "ovr": 84
-  },
-  "william saliba": {
-    "name": "William Saliba",
-    "team": "Arsenal",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "cristian romero": {
-    "name": "Cristian Romero",
-    "team": "Tottenham",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "bremer": {
-    "name": "Bremer",
-    "team": "Juventus",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "pau torres": {
-    "name": "Pau Torres",
-    "team": "Aston Villa",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "presnel kimpembe": {
-    "name": "Presnel Kimpembe",
-    "team": "PSG",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "ibrahima konate": {
-    "name": "Ibrahima Konaté",
-    "team": "Liverpool",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "john stones": {
-    "name": "John Stones",
-    "team": "Manchester City",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "christian eriksen": {
-    "name": "Christian Eriksen",
-    "team": "Manchester United",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "piotr zielinski": {
-    "name": "Piotr Zieliński",
-    "team": "Napoli",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "raphinha": {
-    "name": "Raphinha",
+  "frenkie de jong": {
+    "name": "Frenkie de Jong",
     "team": "Barcelona",
-    "base_price": 20000000,
-    "ovr": 83
+    "base_price": 40000000,
+    "ovr": 87,
+    "position": "CM",
+    "specialities": "Dribbler, Playmaker, Press Resistant",
+    "top_stats": "Dribbling: 89, Ball Control: 89, Passing: 87",
+    "why_get_them": "The ultimate press-resistant midfielder. Can receive the ball under pressure and carry it 40 yards.",
+    "tactical_significance": "A \"carrier\" CM. Perfect for breaking the lines and transitioning from defense to attack."
   },
-  "federico chiesa": {
-    "name": "Federico Chiesa",
-    "team": "Juventus",
-    "base_price": 20000000,
-    "ovr": 83
+  "antonio rudiger": {
+    "name": "Antonio Rüdiger",
+    "team": "Real Madrid",
+    "base_price": 40000000,
+    "ovr": 87,
+    "position": "CB",
+    "specialities": "Physical, Aggressive, Pacy",
+    "top_stats": "Pace: 90, Strength: 89, Aggression: 92",
+    "why_get_them": "A defensive monster. His combination of top-tier pace and strength is incredibly rare for a CB.",
+    "tactical_significance": "The perfect high-line defender. Can catch any striker in a foot race."
   },
-  "moussa diaby": {
-    "name": "Moussa Diaby",
-    "team": "Aston Villa",
-    "base_price": 20000000,
-    "ovr": 83
+  "kalidou koulibaly": {
+    "name": "Kalidou Koulibaly",
+    "team": "Al Hilal",
+    "base_price": 40000000,
+    "ovr": 87,
+    "position": "CB",
+    "specialities": "Defensive Rock, Physical, Tackler",
+    "top_stats": "Strength: 94, Defending: 88, Aggression: 88",
+    "why_get_them": "An absolute mountain of a man. He will physically bully any striker he faces.",
+    "tactical_significance": "A classic, powerful center-back ideal for a deep defensive line."
   },
-  "ousmane dembele": {
-    "name": "Ousmane Dembélé",
+  "trent alexander-arnold": {
+    "name": "Trent Alexander-Arnold",
+    "team": "Liverpool",
+    "base_price": 40000000,
+    "ovr": 87,
+    "position": "RB",
+    "specialities": "Playmaker, Crossing, Set Piece Taker",
+    "top_stats": "Crossing: 94, Passing: 90, Vision: 88",
+    "why_get_them": "Your team's entire offense can run through him from right-back. The best crosser in the game.",
+    "tactical_significance": "An attacking full-back who acts as the primary chance creator for a 4-3-3."
+  },
+  "bruno fernandes": {
+    "name": "Bruno Fernandes",
+    "team": "Manchester United",
+    "base_price": 40000000,
+    "ovr": 87,
+    "position": "CAM",
+    "specialities": "Playmaker, Engine, Long Shot Taker",
+    "top_stats": "Stamina: 94, Vision: 89, Passing: 88",
+    "why_get_them": "A creative machine with a relentless work rate. A high-risk, high-reward chance creator.",
+    "tactical_significance": "The definitive #10 in a 4-2-3-1. Every attack will go through him."
+  },
+  "gianluigi donnarumma": {
+    "name": "Gianluigi Donnarumma",
     "team": "PSG",
-    "base_price": 20000000,
-    "ovr": 83
+    "base_price": 40000000,
+    "ovr": 87,
+    "position": "GK",
+    "specialities": "Shot Stopper, Reflexes",
+    "top_stats": "Reflexes: 90, Diving: 89, Positioning: 86",
+    "why_get_them": "A massive presence in goal with phenomenal reflexes. Very difficult to beat.",
+    "tactical_significance": "A well-rounded, elite shot-stopper that fits any defensive system."
   },
-  "domenico berardi": {
-    "name": "Domenico Berardi",
-    "team": "Sassuolo",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "diego carlos": {
-    "name": "Diego Carlos",
-    "team": "Aston Villa",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "gerard moreno": {
-    "name": "Gerard Moreno",
-    "team": "Villarreal",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "jorginho": {
-    "name": "Jorginho",
-    "team": "Arsenal",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "mikel oyarzabal": {
-    "name": "Mikel Oyarzabal",
-    "team": "Real Sociedad",
-    "base_price": 20000000,
-    "ovr": 83
-  },
-  "lorenzo pellegrini": {
-    "name": "Lorenzo Pellegrini",
-    "team": "Roma",
-    "base_price": 20000000,
-    "ovr": 83
+  "lautaro martinez": {
+    "name": "Lautaro Martínez",
+    "team": "Inter Milan",
+    "base_price": 30000000,
+    "ovr": 87,
+    "position": "ST",
+    "specialities": "Clinical Finisher, Poacher, Aggressive",
+    "top_stats": "Finishing: 88, Positioning: 89, Aggression: 90",
+    "why_get_them": "A tenacious and clinical striker. A pitbull who fights for every ball and has a lethal shot.",
+    "tactical_significance": "An \"advanced forward\" (AF) who presses high and excels in a two-striker partnership."
   },
   "gregor kobel": {
     "name": "Gregor Kobel",
     "team": "Borussia Dortmund",
     "base_price": 20000000,
-    "ovr": 87
+    "ovr": 87,
+    "position": "GK",
+    "specialities": "Shot Stopper, Reflexes",
+    "top_stats": "Reflexes: 90, Diving: 87, Positioning: 85",
+    "why_get_them": "One of the best young goalkeepers in the world. Phenomenal reflexes.",
+    "tactical_significance": "A top-tier shot-stopper who can be the foundation of a team for years."
   },
-  "jordan pickford": {
-    "name": "Jordan Pickford",
-    "team": "Everton",
-    "base_price": 10000000,
-    "ovr": 82
-  },
-  "idrissa gueye": {
-    "name": "Idrissa Gueye",
-    "team": "Everton",
-    "base_price": 10000000,
-    "ovr": 79
-  },
-  "lucas moura": {
-    "name": "Lucas Moura",
-    "team": "Tottenham",
-    "base_price": 10000000,
-    "ovr": 79
-  },
-  "anthony martial": {
-    "name": "Anthony Martial",
-    "team": "Manchester United",
-    "base_price": 10000000,
-    "ovr": 79
-  },
-  "william carvalho": {
-    "name": "William Carvalho",
-    "team": "Real Betis",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "dominik livakovic": {
-    "name": "Dominik Livaković",
-    "team": "Fenerbahçe",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "richarlison": {
-    "name": "Richarlison",
-    "team": "Tottenham",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "gabriel martinelli": {
-    "name": "Gabriel Martinelli",
-    "team": "Arsenal",
-    "base_price": 10000000,
-    "ovr": 82
-  },
-  "luis muriel": {
-    "name": "Luis Muriel",
-    "team": "Atalanta",
-    "base_price": 10000000,
-    "ovr": 82
-  },
-  "juan cuadrado": {
-    "name": "Juan Cuadrado",
-    "team": "Inter",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "jesus navas": {
-    "name": "Jesús Navas",
-    "team": "Sevilla",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "ivan rakitic": {
-    "name": "Ivan Rakitić",
-    "team": "Sevilla",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "ante rebic": {
-    "name": "Ante Rebić",
-    "team": "Beşiktaş",
-    "base_price": 10000000,
-    "ovr": 79
-  },
-  "jose sa": {
-    "name": "José Sá",
-    "team": "Wolves",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "conor coady": {
-    "name": "Conor Coady",
-    "team": "Leicester City",
-    "base_price": 10000000,
-    "ovr": 79
-  },
-  "emre can": {
-    "name": "Emre Can",
-    "team": "Borussia Dortmund",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "aaron wan-bissaka": {
-    "name": "Aaron Wan-Bissaka",
-    "team": "Manchester United",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "wout weghorst": {
-    "name": "Wout Weghorst",
-    "team": "Hoffenheim",
-    "base_price": 10000000,
-    "ovr": 79
-  },
-  "leandro trossard": {
-    "name": "Leandro Trossard",
-    "team": "Arsenal",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "kaoru mitoma": {
-    "name": "Kaoru Mitoma",
-    "team": "Brighton",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "wilfred ndidi": {
-    "name": "Wilfred Ndidi",
-    "team": "Leicester City",
-    "base_price": 10000000,
-    "ovr": 82
-  },
-  "aurelien tchouameni": {
-    "name": "Aurélien Tchouaméni",
+  "federico valverde": {
+    "name": "Federico Valverde",
     "team": "Real Madrid",
-    "base_price": 10000000,
-    "ovr": 82
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "CM",
+    "specialities": "Engine, Pace Merchant, Versatile",
+    "top_stats": "Pace: 90, Stamina: 94, Shot Power: 87",
+    "why_get_them": "A pacy, powerful, and tireless box-to-box midfielder who can also play on the wing.",
+    "tactical_significance": "The perfect \"shuttler\" or #8 in a 4-3-3. His work rate is a massive asset."
   },
-  "dani olmo": {
-    "name": "Dani Olmo",
-    "team": "RB Leipzig",
-    "base_price": 10000000,
-    "ovr": 82
+  "david alaba": {
+    "name": "David Alaba",
+    "team": "Real Madrid",
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "CB",
+    "specialities": "Composed, Playmaking Defender, Versatile",
+    "top_stats": "Passing: 85, Def. Awareness: 87, Composure: 86",
+    "why_get_them": "A world-class, ball-playing center-back who can also play LB or CDM. A leader.",
+    "tactical_significance": "Perfect for a possession-based team that wants to build up from the back."
   },
-  "unai simon": {
-    "name": "Unai Simón",
-    "team": "Athletic Bilbao",
-    "base_price": 10000000,
-    "ovr": 82
+  "eder militao": {
+    "name": "Éder Militão",
+    "team": "Real Madrid",
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "CB",
+    "specialities": "Pacy, Aggressive, Aerial Threat",
+    "top_stats": "Pace: 88, Jumping: 93, Aggression: 89",
+    "why_get_them": "An athletic freak. He is both incredibly fast and dominant in the air.",
+    "tactical_significance": "An aggressive, front-foot defender who excels in a high-line, high-press system."
   },
-  "inaki williams": {
-    "name": "Iñaki Williams",
-    "team": "Athletic Bilbao",
-    "base_price": 10000000,
-    "ovr": 82
+  "andrew robertson": {
+    "name": "Andrew Robertson",
+    "team": "Liverpool",
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "LB",
+    "specialities": "Engine, Crossing",
+    "top_stats": "Stamina: 96, Crossing: 87, Pace: 85",
+    "why_get_them": "A tireless attacking left-back who will run up and down the wing for 90 minutes.",
+    "tactical_significance": "A key attacking piece for a 4-3-3. Provides all the width on the left flank."
   },
-  "jeremie frimpong": {
-    "name": "Jeremie Frimpong",
-    "team": "Bayer Leverkusen",
-    "base_price": 10000000,
-    "ovr": 82
+  "aymeric laporte": {
+    "name": "Aymeric Laporte",
+    "team": "Al-Nassr",
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "CB",
+    "specialities": "Composed, Playmaking Defender",
+    "top_stats": "Passing: 81, Def. Awareness: 87, Composure: 85",
+    "why_get_them": "A composed, left-footed, ball-playing defender. His passing from the back is elite.",
+    "tactical_significance": "A must-have for a 3-at-the-back system (as the LCB) or a possession-based back four."
   },
-  "nuno mendes": {
-    "name": "Nuno Mendes",
+  "milan skriniar": {
+    "name": "Milan Škriniar",
     "team": "PSG",
-    "base_price": 10000000,
-    "ovr": 82
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "CB",
+    "specialities": "Defensive Rock, Physical, Tackler",
+    "top_stats": "Defending: 88, Strength: 91, Aggression: 90",
+    "why_get_them": "An old-school, tough-tackling defender who is immensely strong.",
+    "tactical_significance": "A pure defensive anchor. Perfect for a deep line or as the central CB in a back three."
   },
-  "noussair mazraoui": {
-    "name": "Noussair Mazraoui",
+  "vinicius jr.": {
+    "name": "Vinícius Jr.",
+    "team": "Real Madrid",
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "LW",
+    "specialities": "Pace Merchant, Dribbler, 5-Star Skills",
+    "top_stats": "Pace: 95, Dribbling: 90, Agility: 94",
+    "why_get_them": "One of the fastest, most exciting players in the world. An elite 1v1 dribbler.",
+    "tactical_significance": "The star player for a counter-attacking team. Give him the ball and let him run."
+  },
+  "rafael leao": {
+    "name": "Rafael Leão",
+    "team": "AC Milan",
+    "base_price": 30000000,
+    "ovr": 86,
+    "position": "LW",
+    "specialities": "Pace Merchant, Dribbler, Physical",
+    "top_stats": "Pace: 93, Dribbling: 88, Strength: 80",
+    "why_get_them": "A unique combination of tall, strong, and incredibly fast. A complete offensive mismatch.",
+    "tactical_significance": "A \"target winger\" who can also be used as a striker in a two-man system."
+  },
+  "kingsley coman": {
+    "name": "Kingsley Coman",
     "team": "Bayern Munich",
-    "base_price": 10000000,
-    "ovr": 82
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "LM",
+    "specialities": "Pace Merchant, Dribbler",
+    "top_stats": "Pace: 93, Dribbling: 88, Agility: 92",
+    "why_get_them": "Blistering pace and elite dribbling on either wing. A nightmare for full-backs.",
+    "tactical_significance": "A classic, pacy winger. Stretches the play in a 4-4-2 or 4-3-3."
   },
-  "denzel dumfries": {
-    "name": "Denzel Dumfries",
-    "team": "Inter Milan",
-    "base_price": 10000000,
-    "ovr": 82
+  "theo hernandez": {
+    "name": "Theo Hernández",
+    "team": "AC Milan",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "LB",
+    "specialities": "Pace Merchant, Offensive Full-back",
+    "top_stats": "Pace: 95, Dribbling: 83, Stamina: 88",
+    "why_get_them": "The fastest full-back in the game. An offensive weapon.",
+    "tactical_significance": "A 4-3-3 full-back who acts as a secondary winger, overlapping constantly."
   },
-  "steven berghuis": {
-    "name": "Steven Berghuis",
-    "team": "Ajax",
-    "base_price": 10000000,
-    "ovr": 82
+  "sadio mane": {
+    "name": "Sadio Mané",
+    "team": "Al-Nassr",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "LW",
+    "specialities": "Pace Merchant, Dribbler, Finisher",
+    "top_stats": "Pace: 90, Dribbling: 86, Finishing: 85",
+    "why_get_them": "A well-rounded attacker with great pace, dribbling, and finishing. Very reliable.",
+    "tactical_significance": "A versatile forward who can play LW, RW, or CF in any attacking system."
   },
-  "joao felix": {
-    "name": "João Félix",
+  "paul pogba": {
+    "name": "Paul Pogba",
+    "team": "Juventus",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CM",
+    "specialities": "Playmaker, 5-Star Skills, Physical",
+    "top_stats": "Passing: 88, Dribbling: 87, Strength: 87",
+    "why_get_them": "On his day, an unstoppable force. A tall, strong, skillful, and creative midfielder.",
+    "tactical_significance": "A creative #8 in a 4-3-3 or a CAM in a 4-2-3-1 where he has freedom to attack."
+  },
+  "leon goretzka": {
+    "name": "Leon Goretzka",
+    "team": "Bayern Munich",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CM",
+    "specialities": "Engine, Physical, Aerial Threat",
+    "top_stats": "Stamina: 90, Strength: 88, Jumping: 90",
+    "why_get_them": "A physical monster in midfield. A true box-to-box threat who dominates physically.",
+    "tactical_significance": "The perfect, athletic box-to-box CM in a 4-4-2 or 4-3-3."
+  },
+  "marco verratti": {
+    "name": "Marco Verratti",
+    "team": "Al-Arabi",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CM",
+    "specialities": "Playmaker, Dribbler, Press Resistant",
+    "top_stats": "Balance: 94, Dribbling: 89, Passing: 86",
+    "why_get_them": "A midfield metronome. Impossible to get the ball from, and a fantastic passer.",
+    "tactical_significance": "A \"regista\" or deep-lying playmaker who controls possession and recycles the ball."
+  },
+  "niklas sule": {
+    "name": "Niklas Süle",
+    "team": "Borussia Dortmund",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CB",
+    "specialities": "Physical, Defensive Rock",
+    "top_stats": "Strength: 95, Pace: 85, Defending: 86",
+    "why_get_them": "A rare combination of massive strength (95) and surprisingly high pace (85).",
+    "tactical_significance": "A dominant CB who can anchor a back four or play as a pacy RB if needed."
+  },
+  "ciro immobile": {
+    "name": "Ciro Immobile",
+    "team": "Lazio",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "ST",
+    "specialities": "Clinical Finisher, Poacher",
+    "top_stats": "Finishing: 91, Positioning: 90, Volleys: 88",
+    "why_get_them": "An elite finisher who is always in the right place at the right time.",
+    "tactical_significance": "A pure poacher. Needs service, but will be the focal point of a 4-3-3 or 4-5-1."
+  },
+  "jude bellingham": {
+    "name": "Jude Bellingham",
+    "team": "Real Madrid",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CM",
+    "specialities": "Engine, Dribbler, Complete Midfielder",
+    "top_stats": "Stamina: 92, Dribbling: 87, Defending: 80",
+    "why_get_them": "The ultimate box-to-box midfielder. He can do everything: defend, dribble, pass, and score.",
+    "tactical_significance": "Can play any of the three midfield roles in a 4-3-3. The heart of any team."
+  },
+  "jamal musiala": {
+    "name": "Jamal Musiala",
+    "team": "Bayern Munich",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CAM",
+    "specialities": "Dribbler, 5-Star Skills",
+    "top_stats": "Dribbling: 91, Agility: 92, Ball Control: 89",
+    "why_get_them": "A slippery, highly agile attacking midfielder who glides past defenders.",
+    "tactical_significance": "A perfect #10 in a 4-2-3-1 or a creative, free-roaming #8."
+  },
+  "christopher nkunku": {
+    "name": "Christopher Nkunku",
+    "team": "Chelsea",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CF",
+    "specialities": "Pace Merchant, Dribbler, Playmaker",
+    "top_stats": "Pace: 90, Dribbling: 89, Vision: 85",
+    "why_get_them": "A pacy and creative hybrid forward. A massive threat on the counter.",
+    "tactical_significance": "A versatile attacker. Ideal as a False 9, a CAM, or a wide forward."
+  },
+  "matthijs de ligt": {
+    "name": "Matthijs de Ligt",
+    "team": "Bayern Munich",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CB",
+    "specialities": "Defensive Rock, Physical, Aerial Threat",
+    "top_stats": "Strength: 92, Defending: 86, Jumping: 88",
+    "why_get_them": "A young, strong, and dominant center-back with great leadership qualities.",
+    "tactical_significance": "A commanding presence in a back four. Will win every aerial duel."
+  },
+  "pedri": {
+    "name": "Pedri",
     "team": "Barcelona",
-    "base_price": 10000000,
-    "ovr": 82
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CM",
+    "specialities": "Playmaker, Dribbler, Engine",
+    "top_stats": "Stamina: 91, Vision: 87, Ball Control: 88",
+    "why_get_them": "A technical midfield maestro. Amazing vision, passing, and work rate.",
+    "tactical_significance": "The creative hub of a 4-3-3, similar to Iniesta. Links the midfield and attack."
+  },
+  "nicolo barella": {
+    "name": "Nicolò Barella",
+    "team": "Inter Milan",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CM",
+    "specialities": "Engine, Tenacious, Playmaker",
+    "top_stats": "Stamina: 95, Aggression: 88, Dribbling: 85",
+    "why_get_them": "A relentless, high-energy box-to-box midfielder who is also great on the ball.",
+    "tactical_significance": "A perfect \"shuttler\" in a 3-5-2 or an aggressive #8 in a 4-3-3."
+  },
+  "kyle walker": {
+    "name": "Kyle Walker",
+    "team": "Manchester City",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "RB",
+    "specialities": "Pace Merchant, Physical",
+    "top_stats": "Pace: 94, Strength: 83, Defending: 82",
+    "why_get_them": "The fastest pure defender in the game. A recovery challenge master.",
+    "tactical_significance": "A defensive full-back. His pace allows him to lock down any winger 1v1."
+  },
+  "riyad mahrez": {
+    "name": "Riyad Mahrez",
+    "team": "Al-Ahli",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "RW",
+    "specialities": "Dribbler, 5-Star Skills, Finesse Shot",
+    "top_stats": "Dribbling: 90, Ball Control: 91, Agility: 91",
+    "why_get_them": "A silky-smooth dribbler with 5-star skills and a deadly finesse shot.",
+    "tactical_significance": "A playmaking winger. Cuts inside from the right to create or score with his left foot."
+  },
+  "marcos acuna": {
+    "name": "Marcos Acuña",
+    "team": "Sevilla",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "LB",
+    "specialities": "Aggressive, Crossing, Physical",
+    "top_stats": "Aggression: 91, Crossing: 86, Stamina: 88",
+    "why_get_them": "A pitbull at left-back. Incredibly strong and aggressive, with great delivery.",
+    "tactical_significance": "A balanced full-back who can defend physically and contribute to the attack with crosses."
+  },
+  "diogo jota": {
+    "name": "Diogo Jota",
+    "team": "Liverpool",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CF",
+    "specialities": "Clinical Finisher, Poacher, Two-Footed",
+    "top_stats": "Finishing: 88, Positioning: 89, Pace: 85",
+    "why_get_them": "A natural-born goalscorer. His 5-star weak foot makes him clinical from any angle.",
+    "tactical_significance": "A versatile forward. Can play as a poacher (ST), a false 9 (CF), or an inside forward (LW)."
+  },
+  "phil foden": {
+    "name": "Phil Foden",
+    "team": "Manchester City",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "LW",
+    "specialities": "Dribbler, Playmaker",
+    "top_stats": "Dribbling: 88, Agility: 91, Ball Control: 89",
+    "why_get_them": "An elite creative player with incredible agility and balance. Glides on the ball.",
+    "tactical_significance": "A playmaking winger or CAM. Perfect for a possession system that needs to break down a low block."
+  },
+  "marcus rashford": {
+    "name": "Marcus Rashford",
+    "team": "Manchester United",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "LW",
+    "specialities": "Pace Merchant, Long Shot Taker, 5-Star Skills",
+    "top_stats": "Pace: 92, Shot Power: 89, Dribbling: 84",
+    "why_get_them": "A physical and pacy forward with a rocket of a shot. A constant big-play threat.",
+    "tactical_significance": "A direct, counter-attacking winger or striker. Uses his pace to get in behind."
+  },
+  "bukayo saka": {
+    "name": "Bukayo Saka",
+    "team": "Arsenal",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "RW",
+    "specialities": "Dribbler, Engine, Pacy",
+    "top_stats": "Pace: 88, Stamina: 87, Dribbling: 86",
+    "why_get_them": "A reliable, high-energy winger who contributes in both attack and defense.",
+    "tactical_significance": "A hard-working, modern winger. Perfect for a 4-3-3 system that requires its forwards to press."
+  },
+  "dominik szoboszlai": {
+    "name": "Dominik Szoboszlai",
+    "team": "Liverpool",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CAM",
+    "specialities": "Long Shot Taker, Playmaker, Set Piece Taker",
+    "top_stats": "Shot Power: 90, Long Shots: 88, Passing: 85",
+    "why_get_them": "Possesses one of the best long-range shots in the game. A dead-ball specialist.",
+    "tactical_significance": "A goalscoring CAM. Sits behind the striker and fires rockets from outside the box."
+  },
+  "declan rice": {
+    "name": "Declan Rice",
+    "team": "Arsenal",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CDM",
+    "specialities": "Defensive Rock, Engine, Tackler",
+    "top_stats": "Def. Awareness: 86, Stamina: 90, Interceptions: 87",
+    "why_get_them": "A complete, modern defensive midfielder. Reads the game, intercepts passes, and drives forward.",
+    "tactical_significance": "A fantastic single pivot in a 4-3-3 or part of a double-pivot in a 4-2-3-1."
+  },
+  "sandro tonali": {
+    "name": "Sandro Tonali",
+    "team": "Newcastle Utd",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CDM",
+    "specialities": "Engine, Playmaker, Tenacious",
+    "top_stats": "Stamina: 92, Passing: 84, Aggression: 87",
+    "why_get_them": "A complete midfielder who combines Italian defensive grit with elegant playmaking.",
+    "tactical_significance": "A true box-to-box midfielder (CM) who contributes everywhere on the pitch."
+  },
+  "josko gvardiol": {
+    "name": "Joško Gvardiol",
+    "team": "Manchester City",
+    "base_price": 30000000,
+    "ovr": 85,
+    "position": "CB",
+    "specialities": "Pacy, Physical, Tackler",
+    "top_stats": "Pace: 86, Strength: 87, Defending: 86",
+    "why_get_them": "A \"Rolls-Royce\" defender. Fast, strong, and incredibly comfortable on the ball.",
+    "tactical_significance": "A modern CB perfect for a high line. Can also play as a defensive LB."
+  },
+  "stefan de vrij": {
+    "name": "Stefan de Vrij",
+    "team": "Inter",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Defensive Rock, Composed",
+    "top_stats": "Def. Awareness: 87, Interceptions: 86",
+    "why_get_them": "A smart, composed, and traditional center-back. Excellent positioning.",
+    "tactical_significance": "A reliable CB for a back three or back four who holds the line."
+  },
+  "koke": {
+    "name": "Koke",
+    "team": "Atlético Madrid",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CM",
+    "specialities": "Engine, Playmaker, Leader",
+    "top_stats": "Stamina: 92, Passing: 85, Vision: 84",
+    "why_get_them": "A manager's dream. A high-stamina workhorse who is also a very reliable passer.",
+    "tactical_significance": "A balanced, hard-working CM in a 4-4-2 or a box-to-box role."
+  },
+  "yann sommer": {
+    "name": "Yann Sommer",
+    "team": "Inter",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "GK",
+    "specialities": "Shot Stopper, Reflexes",
+    "top_stats": "Reflexes: 88, Diving: 85, Positioning: 84",
+    "why_get_them": "An agile and dependable keeper known for fantastic reflex saves.",
+    "tactical_significance": "A solid, reliable, traditional goalkeeper for any system."
+  },
+  "dusan tadic": {
+    "name": "Dušan Tadić",
+    "team": "Fenerbahçe",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "LW",
+    "specialities": "Playmaker, Dribbler, Set Piece Taker",
+    "top_stats": "Vision: 89, Passing: 87, Dribbling: 85",
+    "why_get_them": "A pure #10 playing on the wing. An elite creator who will rack up assists.",
+    "tactical_significance": "A wide playmaker. Drifts inside to overload the midfield and play killer through balls."
+  },
+  "marcos llorente": {
+    "name": "Marcos Llorente",
+    "team": "Atlético Madrid",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CM",
+    "specialities": "Engine, Pace Merchant, Versatile",
+    "top_stats": "Pace: 91, Stamina: 93, Dribbling: 82",
+    "why_get_them": "A cheetah in midfield. His combination of 90+ pace and 90+ stamina is game-breaking.",
+    "tactical_significance": "The ultimate utility man. Can play CM, RM, or even RB. A counter-attacking monster."
+  },
+  "raheem sterling": {
+    "name": "Raheem Sterling",
+    "team": "Chelsea",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "LW",
+    "specialities": "Pace Merchant, Dribbler",
+    "top_stats": "Pace: 90, Dribbling: 86, Agility: 91",
+    "why_get_them": "Incredibly fast and agile. A top-tier dribbler who lives in the opponent's box.",
+    "tactical_significance": "A classic, direct winger who will run in behind or take on his man 1v1."
+  },
+  "paulo dybala": {
+    "name": "Paulo Dybala",
+    "team": "Roma",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CAM",
+    "specialities": "Dribbler, Finesse Shot, Set Piece Taker",
+    "top_stats": "Dribbling: 90, Ball Control: 90, Finesse Shot: 88",
+    "why_get_them": "A silky-smooth CAM with a lethal left foot. A magician in tight spaces.",
+    "tactical_significance": "The creative hub of a 4-2-3-1 or as a CF/False 9."
+  },
+  "thomas muller": {
+    "name": "Thomas Müller",
+    "team": "Bayern Munich",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CAM",
+    "specialities": "Poacher, Engine, 'Raumdeuter'",
+    "top_stats": "Positioning: 95, Stamina: 90, Finishing: 85",
+    "why_get_them": "The 'Space Invader'. His 95 positioning is one of the highest in the game. He's always open.",
+    "tactical_significance": "A supporting forward (CF) or CAM. He doesn't create play, he *finds* play. A poacher from midfield."
+  },
+  "raphael varane": {
+    "name": "Raphaël Varane",
+    "team": "Manchester United",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Pacy, Composed, Leader",
+    "top_stats": "Pace: 85, Def. Awareness: 86, Strength: 84",
+    "why_get_them": "A world-champion defender. He combines good pace with elite defensive awareness.",
+    "tactical_significance": "A calm, reliable, and pacy CB perfect for any top-tier back four."
+  },
+  "jules kounde": {
+    "name": "Jules Koundé",
+    "team": "Barcelona",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Pacy, Versatile, Aerial Threat",
+    "top_stats": "Pace: 86, Jumping: 92, Defending: 85",
+    "why_get_them": "A fast, aggressive defender who can also play RB. Wins everything in the air despite his height.",
+    "tactical_significance": "His versatility is key. Can be a shutdown CB or a very pacy, defensive Right-Back."
+  },
+  "achraf hakimi": {
+    "name": "Achraf Hakimi",
+    "team": "PSG",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "RB",
+    "specialities": "Pace Merchant, Offensive Full-back, Engine",
+    "top_stats": "Pace: 94, Stamina: 90, Crossing: 83",
+    "why_get_them": "One of the fastest attacking full-backs in the game. A constant threat down the right flank.",
+    "tactical_significance": "A RWB in a 3-5-2 or a very aggressive RB in a 4-3-3. He is a primary attacker."
+  },
+  "gavi": {
+    "name": "Gavi",
+    "team": "Barcelona",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CM",
+    "specialities": "Engine, Tenacious, Dribbler",
+    "top_stats": "Stamina: 91, Aggression: 90, Agility: 88",
+    "why_get_them": "A pitbull. A high-stamina, high-aggression midfielder who is also a gifted dribbler.",
+    "tactical_significance": "A perfect, aggressive #8 in a 4-3-3 pressing system. Wins the ball back high."
+  },
+  "dayot upamecano": {
+    "name": "Dayot Upamecano",
+    "team": "Bayern Munich",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Pacy, Physical, Aggressive",
+    "top_stats": "Pace: 89, Strength: 90, Aggression: 87",
+    "why_get_them": "An athletic specimen. He is incredibly fast and incredibly strong.",
+    "tactical_significance": "A front-foot, aggressive CB who is perfect for a high-press, high-line system."
+  },
+  "reece james": {
+    "name": "Reece James",
+    "team": "Chelsea",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "RB",
+    "specialities": "Physical, Crossing, Complete Full-back",
+    "top_stats": "Strength: 85, Crossing: 86, Defending: 82",
+    "why_get_them": "The complete package at RB. Strong, pacy, great on the ball, and a brilliant crosser.",
+    "tactical_significance": "A do-it-all full-back. Can play as a traditional RB, an attacking RWB, or even a CB."
+  },
+  "dusan vlahovic": {
+    "name": "Dušan Vlahović",
+    "team": "Juventus",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "ST",
+    "specialities": "Physical, Finisher, Aerial Threat",
+    "top_stats": "Finishing: 87, Shot Power: 88, Strength: 87",
+    "why_get_them": "A big, strong, left-footed striker with a lethal shot. A classic #9.",
+    "tactical_significance": "A powerful target man. Perfect for a team that loves to cross the ball."
+  },
+  "fikayo tomori": {
+    "name": "Fikayo Tomori",
+    "team": "AC Milan",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Pace Merchant, Tackler",
+    "top_stats": "Pace: 90, Defending: 86, Aggression: 86",
+    "why_get_them": "Pure recovery speed. His 90 pace for a CB is elite, allowing him to catch anyone.",
+    "tactical_significance": "The ultimate high-line defender. Built to stop counter-attacks all by himself."
+  },
+  "alphonso davies": {
+    "name": "Alphonso Davies",
+    "team": "Bayern Munich",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "LB",
+    "specialities": "Pace Merchant, Dribbler",
+    "top_stats": "Pace: 96, Dribbling: 86, Stamina: 88",
+    "why_get_them": "The 'Roadrunner'. The fastest full-back in the game, an electric dribbler.",
+    "tactical_significance": "A pure attacking wing-back. Best used in a 3-5-2 or as a 4-3-3 LB who bombs forward."
+  },
+  "rodrygo": {
+    "name": "Rodrygo",
+    "team": "Real Madrid",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "RW",
+    "specialities": "Pace Merchant, Dribbler, Finesse Shot",
+    "top_stats": "Pace: 88, Dribbling: 87, Agility: 89",
+    "why_get_them": "A fast, agile, and clinical winger who is always a goal threat. 5-star skills.",
+    "tactical_significance": "A versatile attacker. Perfect as an inside forward (RW/LW) or as a pacy second striker."
+  },
+  "florian wirtz": {
+    "name": "Florian Wirtz",
+    "team": "Bayer Leverkusen",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CAM",
+    "specialities": "Playmaker, Dribbler",
+    "top_stats": "Vision: 86, Dribbling: 88, Passing: 83",
+    "why_get_them": "A prodigious young talent. A highly creative CAM with fantastic vision and dribbling.",
+    "tactical_significance": "The primary creator for your team. Sits in the #10 hole and unlocks defenses."
+  },
+  "dani carvajal": {
+    "name": "Dani Carvajal",
+    "team": "Real Madrid",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "RB",
+    "specialities": "Engine, Tenacious, Crossing",
+    "top_stats": "Stamina: 90, Aggression: 87, Defending: 82",
+    "why_get_them": "A reliable, high-stamina full-back who is solid defensively and a good crosser.",
+    "tactical_significance": "A well-balanced, traditional RB. Fits any 4-at-the-back system perfectly."
+  },
+  "kieran trippier": {
+    "name": "Kieran Trippier",
+    "team": "Newcastle Utd",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "RB",
+    "specialities": "Crossing, Set Piece Taker",
+    "top_stats": "Crossing: 91, Curve: 89, Passing: 83",
+    "why_get_them": "One of the best crossers and set-piece takers in the league. A dead-ball specialist.",
+    "tactical_significance": "An offensive RB. Your primary source of crosses from the right side."
+  },
+  "leroy sane": {
+    "name": "Leroy Sané",
+    "team": "Bayern Munich",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "RM",
+    "specialities": "Pace Merchant, Dribbler, Finesse Shot",
+    "top_stats": "Pace: 92, Dribbling: 86, Shot Power: 87",
+    "why_get_them": "Blistering speed and a rocket of a shot. A constant threat from the wing.",
+    "tactical_significance": "A direct, counter-attacking winger. Perfect for a 4-4-2 or 4-3-3."
+  },
+  "ronald araujo": {
+    "name": "Ronald Araújo",
+    "team": "Barcelona",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Pace Merchant, Physical, Defensive Rock",
+    "top_stats": "Pace: 87, Strength: 88, Defending: 85",
+    "why_get_them": "A top-tier athlete. He is both extremely fast and extremely strong.",
+    "tactical_significance": "A dominant, aggressive CB who can handle any type of striker 1v1."
+  },
+  "lisandro martinez": {
+    "name": "Lisandro Martínez",
+    "team": "Manchester United",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Aggressive, Playmaking Defender, Tenacious",
+    "top_stats": "Aggression: 92, Defending: 85, Passing: 80",
+    "why_get_them": "The 'Butcher'. Incredibly aggressive, tough-tackling, and a superb passer from the back.",
+    "tactical_significance": "A ball-playing LCB. His aggression and passing make him ideal for a high press."
+  },
+  "thiago silva": {
+    "name": "Thiago Silva",
+    "team": "Chelsea",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Defensive Rock, Leader, Composed",
+    "top_stats": "Def. Awareness: 90, Interceptions: 88, Composure: 87",
+    "why_get_them": "Pure defensive intelligence. He lacks pace but makes up for it with perfect positioning.",
+    "tactical_significance": "The perfect central CB in a back three, or a deep-lying CB in a back four."
+  },
+  "luis diaz": {
+    "name": "Luis Díaz",
+    "team": "Liverpool",
+    "base_price": 20000000,
+    "ovr": 84,
+    "position": "LW",
+    "specialities": "Pace Merchant, Dribbler, Engine",
+    "top_stats": "Pace: 91, Dribbling: 87, Stamina: 88",
+    "why_get_them": "A direct, hard-working, and pacy winger who never stops running.",
+    "tactical_significance": "A perfect high-pressing winger (LW) for a 4-3-3 system."
+  },
+  "william saliba": {
+    "name": "William Saliba",
+    "team": "Arsenal",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Pace Merchant, Composed, Defensive Rock",
+    "top_stats": "Pace: 85, Defending: 84, Strength: 85",
+    "why_get_them": "A young, pacy, and incredibly composed defender. A future 88+ OVR player.",
+    "tactical_significance": "A modern, ball-playing CB who is comfortable in a high line or a deep block."
+  },
+  "cristian romero": {
+    "name": "Cristian Romero",
+    "team": "Tottenham",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Aggressive, Tackler, Physical",
+    "top_stats": "Aggression: 91, Defending: 85, Strength: 84",
+    "why_get_them": "A hyper-aggressive defender who loves a tackle. A true warrior at the back.",
+    "tactical_significance": "A \"stopper\" CB. He steps up to win the ball, perfect alongside a calmer \"cover\" defender."
+  },
+  "bremer": {
+    "name": "Bremer",
+    "team": "Juventus",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Physical, Aerial Threat, Aggressive",
+    "top_stats": "Strength: 92, Jumping: 90, Defending: 84",
+    "why_get_them": "An athletic monster. Dominant in the air and incredibly strong.",
+    "tactical_significance": "A physically imposing CB perfect for a back three or for man-marking a big striker."
+  },
+  "pau torres": {
+    "name": "Pau Torres",
+    "team": "Aston Villa",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Composed, Playmaking Defender",
+    "top_stats": "Passing: 79, Def. Awareness: 85, Composure: 86",
+    "why_get_them": "A classy, left-footed ball-playing defender. His passing breaks the press.",
+    "tactical_significance": "The ideal LCB for a team that wants to build possession from the back."
+  },
+  "presnel kimpembe": {
+    "name": "Presnel Kimpembe",
+    "team": "PSG",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Pacy, Physical, Aggressive",
+    "top_stats": "Pace: 84, Strength: 87, Aggression: 88",
+    "why_get_them": "A very fast and very strong left-footed CB. A rare and valuable combination.",
+    "tactical_significance": "A fast, aggressive LCB who can cover for an attacking full-back."
+  },
+  "ibrahima konate": {
+    "name": "Ibrahima Konaté",
+    "team": "Liverpool",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Pace Merchant, Physical",
+    "top_stats": "Pace: 87, Strength: 88, Defending: 83",
+    "why_get_them": "One of the fastest center-backs in the game. A pure athlete.",
+    "tactical_significance": "The ultimate high-line defender, perfect for stopping pace abusers."
+  },
+  "john stones": {
+    "name": "John Stones",
+    "team": "Manchester City",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Composed, Playmaking Defender",
+    "top_stats": "Passing: 81, Composure: 85, Def. Awareness: 84",
+    "why_get_them": "A supremely elegant, ball-playing defender. Can also step into midfield (CDM).",
+    "tactical_significance": "A \"libero\" or ball-playing CB. Essential for a team that values possession."
+  },
+  "christian eriksen": {
+    "name": "Christian Eriksen",
+    "team": "Manchester United",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CM",
+    "specialities": "Playmaker, Set Piece Taker, Crossing",
+    "top_stats": "Vision: 88, Passing: 87, Crossing: 88",
+    "why_get_them": "A master passer. His vision and set-piece delivery are still absolutely world-class.",
+    "tactical_significance": "A deep-lying playmaker or CAM who can spray passes and control the game's tempo."
+  },
+  "piotr zielinski": {
+    "name": "Piotr Zieliński",
+    "team": "Napoli",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CM",
+    "specialities": "Dribbler, Playmaker, Two-Footed",
+    "top_stats": "Dribbling: 86, Agility: 85, Vision: 83",
+    "why_get_them": "A highly agile, creative, and two-footed (5-star weak foot) midfielder.",
+    "tactical_significance": "A versatile and unpredictable CAM or attacking #8."
+  },
+  "raphinha": {
+    "name": "Raphinha",
+    "team": "Barcelona",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "RW",
+    "specialities": "Pace Merchant, Dribbler, Finesse Shot",
+    "top_stats": "Pace: 90, Dribbling: 85, Agility: 88",
+    "why_get_them": "A pacy, tricky, and direct winger with a great left-footed shot.",
+    "tactical_significance": "A classic inside forward. Cuts in from the right wing to shoot or create."
+  },
+  "federico chiesa": {
+    "name": "Federico Chiesa",
+    "team": "Juventus",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "LM",
+    "specialities": "Pace Merchant, Dribbler",
+    "top_stats": "Pace: 92, Dribbling: 86, Shot Power: 85",
+    "why_get_them": "An explosive and direct winger who can play on either flank. A counter-attack specialist.",
+    "tactical_significance": "A hard-working, pacy winger. Frighteningly direct."
+  },
+  "moussa diaby": {
+    "name": "Moussa Diaby",
+    "team": "Aston Villa",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "RM",
+    "specialities": "Pace Merchant, Dribbler",
+    "top_stats": "Pace: 95, Agility: 91, Dribbling: 85",
+    "why_get_them": "One of the fastest players in the game. His acceleration is a cheat code.",
+    "tactical_significance": "A pure, direct winger. Gets in behind the defense with ease."
+  },
+  "ousmane dembele": {
+    "name": "Ousmane Dembélé",
+    "team": "PSG",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "RW",
+    "specialities": "Pace Merchant, Dribbler, Two-Footed",
+    "top_stats": "Pace: 93, Dribbling: 87, 5-Star Skills/5-Star Weak Foot",
+    "why_get_them": "The ultimate wildcard. 5-star skills and 5-star weak foot make him completely unpredictable.",
+    "tactical_significance": "A dynamic winger who can play on either side and beat his man to create chaos."
+  },
+  "domenico berardi": {
+    "name": "Domenico Berardi",
+    "team": "Sassuolo",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "RW",
+    "specialities": "Finesse Shot, Long Shot Taker, Set Piece Taker",
+    "top_stats": "Finesse Shot: 88, Volleys: 87, Passing: 83",
+    "why_get_them": "A creative winger with a deadly left-footed finesse shot. A great budget alternative.",
+    "tactical_significance": "A playmaking inside forward who cuts in from the right."
+  },
+  "diego carlos": {
+    "name": "Diego Carlos",
+    "team": "Aston Villa",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CB",
+    "specialities": "Physical, Aggressive, Aerial Threat",
+    "top_stats": "Strength: 91, Aggression: 89, Jumping: 88",
+    "why_get_them": "A physically dominant, aggressive center-back. A wall.",
+    "tactical_significance": "A "stopper" CB who will physically challenge every forward he faces."
+  },
+  "gerard moreno": {
+    "name": "Gerard Moreno",
+    "team": "Villarreal",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "ST",
+    "specialities": "Clinical Finisher, Playmaker",
+    "top_stats": "Finishing: 87, Positioning: 88, Vision: 83",
+    "why_get_them": "A smart, technical, and well-rounded striker who can score and create.",
+    "tactical_significance": "A great "Complete Forward" who can link up play, not just poach goals."
+  },
+  "jorginho": {
+    "name": "Jorginho",
+    "team": "Arsenal",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CDM",
+    "specialities": "Playmaker, Composed, Penalty Specialist",
+    "top_stats": "Passing: 86, Vision: 84, Composure: 88",
+    "why_get_them": "A deep-lying playmaker who controls the game with his passing and composure. Never misses a pen.",
+    "tactical_significance": "A "regista" for a possession-heavy team. Will not run, but will never lose the ball."
+  },
+  "mikel oyarzabal": {
+    "name": "Mikel Oyarzabal",
+    "team": "Real Sociedad",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "LW",
+    "specialities": "Clinical Finisher, Playmaker",
+    "top_stats": "Finishing: 85, Vision: 84, Positioning: 86",
+    "why_get_them": "A highly intelligent and clinical forward who can play wide or as a striker.",
+    "tactical_significance": "A smart inside forward who drifts into central areas to score goals."
+  },
+  "lorenzo pellegrini": {
+    "name": "Lorenzo Pellegrini",
+    "team": "Roma",
+    "base_price": 20000000,
+    "ovr": 83,
+    "position": "CAM",
+    "specialities": "Playmaker, Long Shot Taker, Engine",
+    "top_stats": "Vision: 86, Passing: 84, Stamina: 88",
+    "why_get_them": "A hard-working, creative CAM who contributes on both ends of the pitch.",
+    "tactical_significance": "A perfect box-to-box CAM in a 4-2-3-1 or an offensive #8 in a 4-3-3."
   },
   "cody gakpo": {
     "name": "Cody Gakpo",
     "team": "Liverpool",
     "base_price": 10000000,
-    "ovr": 83
-  },
-  "samir handanovic": {
-    "name": "Samir Handanović",
-    "team": "Inter Milan",
-    "base_price": 10000000,
-    "ovr": 82
+    "ovr": 83,
+    "position": "CF",
+    "specialities": "Pace Merchant, Finisher, Physical",
+    "top_stats": "Pace: 88, Finishing: 84, Strength: 81",
+    "why_get_them": "A tall, fast, and strong forward who is versatile.",
+    "tactical_significance": "Can be a lone ST, a CF, or a wide forward. A great, flexible attacker."
   },
   "lucas hernandez": {
     "name": "Lucas Hernández",
     "team": "PSG",
     "base_price": 10000000,
-    "ovr": 84
-  },
-  "zambo anguissa": {
-    "name": "Zambo Anguissa",
-    "team": "Napoli",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "memphis depay": {
-    "name": "Memphis Depay",
-    "team": "Atlético Madrid",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "tammy abraham": {
-    "name": "Tammy Abraham",
-    "team": "Roma",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "timo werner": {
-    "name": "Timo Werner",
-    "team": "RB Leipzig",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "pedro porro": {
-    "name": "Pedro Porro",
-    "team": "Tottenham",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "rafa": {
-    "name": "Rafa",
-    "team": "Benfica",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "antony": {
-    "name": "Antony",
-    "team": "Manchester United",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "ferran torres": {
-    "name": "Ferran Torres",
-    "team": "Barcelona",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "ferland mendy": {
-    "name": "Ferland Mendy",
-    "team": "Real Madrid",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "carlos soler": {
-    "name": "Carlos Soler",
-    "team": "PSG",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "thomas lemar": {
-    "name": "Thomas Lemar",
-    "team": "Atlético Madrid",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "hakim ziyech": {
-    "name": "Hakim Ziyech",
-    "team": "Galatasaray",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "hirving lozano": {
-    "name": "Hirving Lozano",
-    "team": "PSV Eindhoven",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "nick pope": {
-    "name": "Nick Pope",
-    "team": "Newcastle Utd",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "lucas paqueta": {
-    "name": "Lucas Paquetá",
-    "team": "West Ham",
-    "base_price": 10000000,
-    "ovr": 82
-  },
-  "leonardo spinazzola": {
-    "name": "Leonardo Spinazzola",
-    "team": "Roma",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "konrad laimer": {
-    "name": "Konrad Laimer",
-    "team": "Bayern Munich",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "marco reus": {
-    "name": "Marco Reus",
-    "team": "Borussia Dortmund",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "chris smalling": {
-    "name": "Chris Smalling",
-    "team": "Roma",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "matthias ginter": {
-    "name": "Matthias Ginter",
-    "team": "SC Freiburg",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "ricardo pereira": {
-    "name": "Ricardo Pereira",
-    "team": "Leicester City",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "leon bailey": {
-    "name": "Leon Bailey",
-    "team": "Aston Villa",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "alex grimaldo": {
-    "name": "Álex Grimaldo",
-    "team": "Bayer Leverkusen",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "jose gaya": {
-    "name": "José Gayà",
-    "team": "Valencia",
-    "base_price": 10000000,
-    "ovr": 80
-  },
-  "fernando": {
-    "name": "Fernando",
-    "team": "Sevilla",
-    "base_price": 10000000,
-    "ovr": 81
-  },
-  "roger ibanez": {
-    "name": "Roger Ibañez",
-    "team": "Al-Ahli",
-    "base_price": 10000000,
-    "ovr": 79
+    "ovr": 84,
+    "position": "CB",
+    "specialities": "Aggressive, Tackler, Versatile",
+    "top_stats": "Aggression: 89, Defending: 85, Pace: 81",
+    "why_get_them": "A tenacious, left-footed defender who can play both CB and LB.",
+    "tactical_significance": "A huge asset. Can be an aggressive LCB or a very solid, defensive-minded LB."
   },
   "mason mount": {
     "name": "Mason Mount",
     "team": "Manchester United",
     "base_price": 20000000,
-    "ovr": 84
+    "ovr": 84,
+    "position": "CAM",
+    "specialities": "Engine, Playmaker, Long Shot Taker",
+    "top_stats": "Stamina: 91, Vision: 85, Passing: 83",
+    "why_get_them": "An all-action attacking midfielder. He presses, he runs, and he can create.",
+    "tactical_significance": "A perfect pressing-forward (CAM) in a 4-2-3-1 or a high-energy #8."
+  },
+  "jordan pickford": {
+    "name": "Jordan Pickford",
+    "team": "Everton",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "GK"
+  },
+  "idrissa gueye": {
+    "name": "Idrissa Gueye",
+    "team": "Everton",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "CDM"
+  },
+  "lucas moura": {
+    "name": "Lucas Moura",
+    "team": "Tottenham",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "RW"
+  },
+  "anthony martial": {
+    "name": "Anthony Martial",
+    "team": "Manchester United",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "ST"
+  },
+  "william carvalho": {
+    "name": "William Carvalho",
+    "team": "Real Betis",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CDM"
+  },
+  "dominik livakovic": {
+    "name": "Dominik Livaković",
+    "team": "Fenerbahçe",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "GK"
+  },
+  "richarlison": {
+    "name": "Richarlison",
+    "team": "Tottenham",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "ST"
+  },
+  "gabriel martinelli": {
+    "name": "Gabriel Martinelli",
+    "team": "Arsenal",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "LW"
+  },
+  "luis muriel": {
+    "name": "Luis Muriel",
+    "team": "Atalanta",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "ST"
+  },
+  "juan cuadrado": {
+    "name": "Juan Cuadrado",
+    "team": "Inter",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RM"
+  },
+  "jesus navas": {
+    "name": "Jesús Navas",
+    "team": "Sevilla",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RB"
+  },
+  "ivan rakitic": {
+    "name": "Ivan Rakitić",
+    "team": "Sevilla",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CM"
+  },
+  "ante rebic": {
+    "name": "Ante Rebić",
+    "team": "Beşiktaş",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "LW"
+  },
+  "jose sa": {
+    "name": "José Sá",
+    "team": "Wolves",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "GK"
+  },
+  "conor coady": {
+    "name": "Conor Coady",
+    "team": "Leicester City",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "CB"
+  },
+  "emre can": {
+    "name": "Emre Can",
+    "team": "Borussia Dortmund",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CDM"
+  },
+  "aaron wan-bissaka": {
+    "name": "Aaron Wan-Bissaka",
+    "team": "Manchester United",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RB"
+  },
+  "wout weghorst": {
+    "name": "Wout Weghorst",
+    "team": "Hoffenheim",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "ST"
+  },
+  "leandro trossard": {
+    "name": "Leandro Trossard",
+    "team": "Arsenal",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "LW"
+  },
+  "kaoru mitoma": {
+    "name": "Kaoru Mitoma",
+    "team": "Brighton",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "LM"
+  },
+  "wilfred ndidi": {
+    "name": "Wilfred Ndidi",
+    "team": "Leicester City",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "CDM"
+  },
+  "aurelien tchouameni": {
+    "name": "Aurélien Tchouaméni",
+    "team": "Real Madrid",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "CDM"
+  },
+  "dani olmo": {
+    "name": "Dani Olmo",
+    "team": "RB Leipzig",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "CAM"
+  },
+  "unai simon": {
+    "name": "Unai Simón",
+    "team": "Athletic Bilbao",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "GK"
+  },
+  "inaki williams": {
+    "name": "Iñaki Williams",
+    "team": "Athletic Bilbao",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "ST"
+  },
+  "jeremie frimpong": {
+    "name": "Jeremie Frimpong",
+    "team": "Bayer Leverkusen",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "RWB"
+  },
+  "nuno mendes": {
+    "name": "Nuno Mendes",
+    "team": "PSG",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "LWB"
+  },
+  "noussair mazraoui": {
+    "name": "Noussair Mazraoui",
+    "team": "Bayern Munich",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "RB"
+  },
+  "denzel dumfries": {
+    "name": "Denzel Dumfries",
+    "team": "Inter Milan",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "RWB"
+  },
+  "steven berghuis": {
+    "name": "Steven Berghuis",
+    "team": "Ajax",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "CAM"
+  },
+  "joao felix": {
+    "name": "João Félix",
+    "team": "Barcelona",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "CF"
+  },
+  "samir handanovic": {
+    "name": "Samir Handanović",
+    "team": "Inter Milan",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "GK"
+  },
+  "zambo anguissa": {
+    "name": "Zambo Anguissa",
+    "team": "Napoli",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CM"
+  },
+  "memphis depay": {
+    "name": "Memphis Depay",
+    "team": "Atlético Madrid",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "ST"
+  },
+  "tammy abraham": {
+    "name": "Tammy Abraham",
+    "team": "Roma",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "ST"
+  },
+  "timo werner": {
+    "name": "Timo Werner",
+    "team": "RB Leipzig",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "ST"
+  },
+  "pedro porro": {
+    "name": "Pedro Porro",
+    "team": "Tottenham",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RWB"
+  },
+  "rafa": {
+    "name": "Rafa",
+    "team": "Benfica",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CF"
+  },
+  "antony": {
+    "name": "Antony",
+    "team": "Manchester United",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RW"
+  },
+  "ferran torres": {
+    "name": "Ferran Torres",
+    "team": "Barcelona",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "LW"
+  },
+  "ferland mendy": {
+    "name": "Ferland Mendy",
+    "team": "Real Madrid",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "LB"
+  },
+  "carlos soler": {
+    "name": "Carlos Soler",
+    "team": "PSG",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CM"
+  },
+  "thomas lemar": {
+    "name": "Thomas Lemar",
+    "team": "Atlético Madrid",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CM"
+  },
+  "hakim ziyech": {
+    "name": "Hakim Ziyech",
+    "team": "Galatasaray",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RW"
+  },
+  "hirving lozano": {
+    "name": "Hirving Lozano",
+    "team": "PSV Eindhoven",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "RW"
+  },
+  "nick pope": {
+    "name": "Nick Pope",
+    "team": "Newcastle Utd",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "GK"
+  },
+  "lucas paqueta": {
+    "name": "Lucas Paquetá",
+    "team": "West Ham",
+    "base_price": 10000000,
+    "ovr": 82,
+    "position": "CAM"
+  },
+  "leonardo spinazzola": {
+    "name": "Leonardo Spinazzola",
+    "team": "Roma",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "LWB"
+  },
+  "konrad laimer": {
+    "name": "Konrad Laimer",
+    "team": "Bayern Munich",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "CDM"
+  },
+  "marco reus": {
+    "name": "Marco Reus",
+    "team": "Borussia Dortmund",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "CAM"
+  },
+  "chris smalling": {
+    "name": "Chris Smalling",
+    "team": "Roma",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "CB"
+  },
+  "matthias ginter": {
+    "name": "Matthias Ginter",
+    "team": "SC Freiburg",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "CB"
+  },
+  "ricardo pereira": {
+    "name": "Ricardo Pereira",
+    "team": "Leicester City",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "RB"
+  },
+  "leon bailey": {
+    "name": "Leon Bailey",
+    "team": "Aston Villa",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "RM"
+  },
+  "alex grimaldo": {
+    "name":ReadMe "Álex Grimaldo",
+    "team": "Bayer Leverkusen",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "LWB"
+  },
+  "jose gaya": {
+    "name": "José Gayà",
+    "team": "Valencia",
+    "base_price": 10000000,
+    "ovr": 80,
+    "position": "LB"
+  },
+  "fernando": {
+    "name": "Fernando",
+    "team": "Sevilla",
+    "base_price": 10000000,
+    "ovr": 81,
+    "position": "CDM"
+  },
+  "roger ibanez": {
+    "name": "Roger Ibañez",
+    "team": "Al-Ahli",
+    "base_price": 10000000,
+    "ovr": 79,
+    "position": "CB"
   },
   "darwin nunez": {
     "name": "Darwin Núñez",
     "team": "Liverpool",
     "base_price": 5000000,
-    "ovr": 82
-  },
-  "mykhailo mudryk": {
-    "name": "Mykhailo Mudryk",
-    "team": "Chelsea",
-    "base_price": 5000000,
-    "ovr": 75
+    "ovr": 82,
+    "position": "ST"
   },
   "ollie watkins": {
     "name": "Ollie Watkins",
     "team": "Aston Villa",
     "base_price": 5000000,
-    "ovr": 80
+    "ovr": 80,
+    "position": "ST"
   },
   "alexander isak": {
     "name": "Alexander Isak",
     "team": "Newcastle Utd",
     "base_price": 5000000,
-    "ovr": 81
+    "ovr": 81,
+    "position": "ST"
   },
   "taiwo awoniyi": {
     "name": "Taiwo Awoniyi",
     "team": "Nottm Forest",
     "base_price": 5000000,
-    "ovr": 79
+    "ovr": 79,
+    "position": "ST"
   },
   "nicolas tagliafico": {
     "name": "Nicolás Tagliafico",
     "team": "Lyon",
     "base_price": 5000000,
-    "ovr": 81
+    "ovr": 81,
+    "position": "LB"
   },
   "ben white": {
     "name": "Ben White",
     "team": "Arsenal",
     "base_price": 5000000,
-    "ovr": 80
+    "ovr": 80,
+    "position": "RB"
   },
   "manuel ugarte": {
     "name": "Manuel Ugarte",
     "team": "PSG",
     "base_price": 5000000,
-    "ovr": 79
+    "ovr": 79,
+    "position": "CDM"
   }
 }
